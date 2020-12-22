@@ -10,13 +10,13 @@ variaveis_locais:
 	(lista_de_variaveis DOIS_PONTOS tipo_da_variavel)*;
 
 procedimento:
-	PROCEDIMENTO nome_do_procedimento PARAMETROS COMENTARIO* variaveis_locais INICIO expressoes* FIM_PROCEDIMENTO;
+	PROCEDIMENTO nome_do_procedimento parametros COMENTARIO* variaveis_locais INICIO expressoes* FIM_PROCEDIMENTO;
 
 funcoes: 
-	FUNCAO nome_da_funcao PARAMETROS DOIS_PONTOS TIPO_DE_DADO COMENTARIO* variaveis_locais INICIO expressoes* RETORNO lista_de_variaveis FIM_FUNCAO;
+	FUNCAO nome_da_funcao parametros DOIS_PONTOS TIPO_DE_DADO COMENTARIO* variaveis_locais INICIO expressoes* RETORNO (lista_de_variaveis|chamar_funcao)+ FIM_FUNCAO;
 
-PARAMETROS: 
-	VAR? ABRE_PARENTESES lista_de_variaveis DOIS_PONTOS TIPO_DE_DADO (PONTO_VIRGULA lista_de_variaveis DOIS_PONTOS TIPO_DE_DADO)* FECHA_PARENTESES;
+parametros: 
+	 ABRE_PARENTESES VAR? lista_de_variaveis DOIS_PONTOS TIPO_DE_DADO (PONTO_VIRGULA VAR? lista_de_variaveis DOIS_PONTOS TIPO_DE_DADO)* FECHA_PARENTESES;
 
 nome_do_procedimento: 
 	NOME_DA_VARIAVEL;
@@ -24,7 +24,9 @@ nome_da_funcao:
 	NOME_DA_VARIAVEL;
 
 expressoes:
-	atribuicao 
+	chamar_procedimento
+	| chamar_funcao
+	| atribuicao 
 	| escreva
 	| leia 
 	| desvio_condicional 
@@ -32,8 +34,21 @@ expressoes:
 	| para_faca 
 	| enquanto_faca
 	| repita_ate
+	| arquivo
+	| aleatorio
+	| timer
 	| INTERROMPA
-	| COMENTARIO;
+	| COMENTARIO
+	| PAUSA
+	| DEBUG
+	| ECO
+	| CRONOMETRO
+	| LIMPATELA;
+
+chamar_funcao: 
+	nome_da_funcao ABRE_PARENTESES (lista_de_variaveis|chamar_funcao)+ FECHA_PARENTESES;
+chamar_procedimento: 
+	nome_do_procedimento ABRE_PARENTESES (lista_de_variaveis|chamar_funcao)* FECHA_PARENTESES;
 
 atribuicao: constCaractere | constNumerico | constBool;
 
@@ -67,6 +82,12 @@ enquanto_faca:
 repita_ate:
 	REPITA expressoes ATE expressao_logica;
 
+aleatorio: 
+	ALEATORIO (ABRE_COLCHETES ON FECHA_COLCHETES | ABRE_COLCHETES OFF FECHA_COLCHETES | DIGIT* VIRGULA DIGIT);
+
+arquivo: ARQUIVO NOME_ARQUIVO;
+
+timer: TIMER (ABRE_COLCHETES ON FECHA_COLCHETES | ABRE_COLCHETES OFF FECHA_COLCHETES | DIGIT*);
 
 lista_de_variaveis: 
 	NOME_DA_VARIAVEL (VIRGULA NOME_DA_VARIAVEL)*;
@@ -155,3 +176,12 @@ FUNCAO: 'funcao';
 RETORNO: 'retorne';
 FIM_FUNCAO: 'fimfuncao';
 PONTO_VIRGULA: ';';
+VAR: 'var';
+ON: 'on';
+OFF: 'off';
+ARQUIVO: 'arquivo';
+NOME_ARQUIVO: ["][a-zA-Z0-9 $&+,:;=?@#|'<>.^*()%-]+\.[a-zA-Z0-9]+["];
+PAUSA: 'pausa';
+ECO: ON | OFF;
+CRONOMETRO: ON | OFF;
+LIMPATELA: 'limpatela';
