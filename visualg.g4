@@ -1,38 +1,50 @@
 grammar visualg;
 
-prog: (
-    ALGORITMO STRING COMENTARIO* variaveis_globais (PROCEDIMENTOS | FUNCOES)* INICIO expressoes* FIM
-) EOF;
+prog: 
+	(ALGORITMO STRING COMENTARIO* variaveis_globais (procedimentos | funcoes)* INICIO expressoes* FIM) EOF;
 
-variaveis_globais: (
-		declaracao
-		| constString
-		| constInteiro
-		| constBool
-	)*;
+variaveis_globais: 
+	(lista_de_variaveis DOIS_PONTOS tipo_da_variavel)*;
 
-declaracao:
-    lista_de_variaveis DOIS_PONTOS tipo_da_variavel;
+variaveis_locais: 
+	(lista_de_variaveis DOIS_PONTOS tipo_da_variavel)*;
 
-constString: 
-    NOME_DA_VARIAVEL ATRIBUICAO STRING;
+procedimento:
+	PROCEDIMENTO nome_do_procedimento PARAMETROS COMENTARIO* variaveis_locais INICIO expressoes* FIM_PROCEDIMENTO;
 
-constInteiro:
-    NOME_DA_VARIAVEL ATRIBUICAO calculo;
+funcoes: 
+	FUNCAO nome_da_funcao PARAMETROS DOIS_PONTOS TIPO_DE_DADO COMENTARIO* variaveis_locais INICIO expressoes* RETORNO lista_de_variaveis FIM_FUNCAO;
 
-constBool:
-	NOME_DA_VARIAVEL ATRIBUICAO BOOL;
+PARAMETROS: 
+	VAR? ABRE_PARENTESES lista_de_variaveis DOIS_PONTOS TIPO_DE_DADO (PONTO_VIRGULA lista_de_variaveis DOIS_PONTOS TIPO_DE_DADO)* FECHA_PARENTESES;
 
+nome_do_procedimento: 
+	NOME_DA_VARIAVEL;
+nome_da_funcao: 
+	NOME_DA_VARIAVEL;
 
-expressoes: 
-	escreva
+expressoes:
+	atribuicao 
+	| escreva
 	| leia 
 	| desvio_condicional 
 	| selecao_multipla 
 	| para_faca 
 	| enquanto_faca
 	| repita_ate
-	| INTERROMPA;
+	| INTERROMPA
+	| COMENTARIO;
+
+atribuicao: constCaractere | constNumerico | constBool;
+
+constCaractere: 
+    NOME_DA_VARIAVEL ATRIBUIR STRING;
+
+constNumerico:
+    NOME_DA_VARIAVEL ATRIBUIR calculo;
+
+constBool:
+	NOME_DA_VARIAVEL ATRIBUIR BOOL;
 
 escreval: 
 	ESCREVA ABRE_PARENTESES (STRING | calculo | print_variavel) (VIRGULA (STRING | calculo | print_variavel))* FECHA_PARENTESES;
@@ -56,17 +68,24 @@ repita_ate:
 	REPITA expressoes ATE expressao_logica;
 
 
-lista_de_variaveis: NOME_DA_VARIAVEL (VIRGULA NOME_DA_VARIAVEL)*;
-lista_de_intervalo: ABRE_COLCHETES intervalo FECHA_COLCHETES;
+lista_de_variaveis: 
+	NOME_DA_VARIAVEL (VIRGULA NOME_DA_VARIAVEL)*;
+lista_de_intervalo: 
+	ABRE_COLCHETES intervalo FECHA_COLCHETES;
 
-tipo_da_variavel: TIPO_DE_DADO | tipo_vetor;
-tipo_vetor: VETOR: lista_de_intervalo DE TIPO_DE_DADO;
+tipo_da_variavel: 
+	TIPO_DE_DADO | tipo_vetor;
+tipo_vetor: 
+	VETOR: lista_de_intervalo DE TIPO_DE_DADO;
 
-intervalo: DIGIT+ PONTO_PONTO DIGIT+ (VIRGULA DIGIT+ PONTO_PONTO DIGIT)*;
+intervalo: 
+	DIGIT+ PONTO_PONTO DIGIT+ (VIRGULA DIGIT+ PONTO_PONTO DIGIT)*;
 
-print_variavel: NOME_DA_VARIAVEL (DOIS_PONTOS DIGIT+){ ,2};
+print_variavel: 
+	NOME_DA_VARIAVEL (DOIS_PONTOS DIGIT+){ ,2};
 
-calculo: expressao_aritmetica | expressao_logica;
+calculo: 
+	expressao_aritmetica | expressao_logica;
 
 expressao_aritmetica:
 	ABRE_PARENTESES? OPERADOR_UNARIO? expressao_selecao ((OPERADOR_BINARIO ABRE_PARENTESES? OPERADOR_UNARIO? expressao_selecao FECHA_PARENTESES?)* FECHA_PARENTESES?;
@@ -74,11 +93,15 @@ expressao_aritmetica:
 expressao_logica:
 	ABRE_PARENTESES? OPERADOR_UNARIO? expressao_selecao (OPERADOR_RELACIONAL ABRE_PARENTESES? OPERADOR_LOGICO? OPERADOR_UNARIO? expressao_selecao FECHA_PARENTESES?)* FECHA_PARENTESES?;
 
-selecao_aritmetica: NOME_DA_VARIAVEL| INTEIRO | REAL;
-selecao_logica: NOME_DA_VARIAVEL| INTEIRO | REAL | BOOL;
-selecao_escolha: INTEIRO | REAL | STRING | BOOL;
+selecao_aritmetica: 
+	NOME_DA_VARIAVEL| INTEIRO | REAL;
+selecao_logica: 
+	NOME_DA_VARIAVEL| INTEIRO | REAL | BOOL;
+selecao_escolha: 
+	INTEIRO | REAL | STRING | BOOL;
 
-incremento: MENOS? DIGIT+;
+incremento: 
+	MENOS? DIGIT+;
 
 // DIGIT
 fragment DIGIT: [0-9];
@@ -103,7 +126,7 @@ DE: 'de';
 ABRE_COLCHETES: '[';
 FECHA_COLCHETES: ']';
 VIRGULA: ',';
-ATRIBUICAO: '<-';
+ATRIBUIR: '<-';
 INTEIRO: DIGIT+;
 REAL: DIGIT+ ([.]DIGIT+)?;
 BOOL: 'FALSO' | 'VERDADEIRO';
@@ -126,3 +149,9 @@ FIM_PARA: 'fimpara';
 ENQUANTO: 'enquanto';
 FIM_ENQUANTO: 'fimenquanto';
 INTERROMPA: 'interrompa';
+PROCEDIMENTO: 'procedimento';
+FIM_PROCEDIMENTO: 'fimprocedimento';
+FUNCAO: 'funcao';
+RETORNO: 'retorne';
+FIM_FUNCAO: 'fimfuncao';
+PONTO_VIRGULA: ';';
