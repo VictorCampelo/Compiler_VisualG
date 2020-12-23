@@ -23,6 +23,7 @@ pip install wheel
 
 ## How to run:
 ### Inside of project's directory run the follows commands:
+### Change the file extension at "nomearquivo.jav".
 ```sh
 antlr4 -Dlanguage=Python3 Hello.g4
 python3 main.py nomearquivo.jav
