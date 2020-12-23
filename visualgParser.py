@@ -2998,8 +2998,6 @@ class visualgParser ( Parser ):
                 _la = self._input.LA(1)
                 if not (_la==visualgParser.DIGIT):
                     break
-
-             ,2
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
