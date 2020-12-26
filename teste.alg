@@ -18,12 +18,22 @@ Valor1 <- 1.5
 Valor2 <- Valor1 + a
 vet[1] <- vet[1] + (a * 3)
 matriz[3,9] <- a/4 - 5
-nome_do_aluno <- "José da Silva"
+nome_do_aluno <- "Jose da Silva"
 sinalizador <- FALSO
 
 inicio
 // Seção de Comandos
- 
+x <- 2.5
+y <- 6
+a <- "teste"
+l <- VERDADEIRO
+
+escreval ("x", x:4:1, y+3:4) // Escreve: x 2.5 9
+escreval (a, "ok") // Escreve: testeok (e depois pula linha)
+escreval (a, " ok") // Escreve: teste ok (e depois pula linha)
+escreval (a + " ok") // Escreve: teste ok (e depois pula linha)
+escreva (l) // Escreve: VERDADEIRO
+
 escreva ("Informe o nome do aluno: ")
 leia (nome)
 escreva ("Informe a nota da P1: ")

@@ -107,12 +107,24 @@ def main(argv):
                 tipo = "<NOME_ARQUIVO>"
             elif t == lexer.NOME_DA_VARIAVEL:
                 tipo = "<NOME_DA_VARIAVEL>"
+            elif t == lexer.NOME_DO_PROCEDIMENTO:
+                tipo = "<NOME_DO_PROCEDIMENTO>"
+            elif t == lexer.NOME_DA_FUNCAO:
+                tipo = "<NOME_DA_FUNCAO>"
             elif t == lexer.OFF:
                 tipo = "<OFF>"
             elif t == lexer.ON:
                 tipo = "<ON>"
             elif t == lexer.OUTRO_CASO:
                 tipo = "<OUTRO_CASO>"
+            elif t == lexer.OPERADOR_BINARIO:
+                tipo = "<OPERADOR_BINARIO>"
+            elif t == lexer.OPERADOR_RELACIONAL:
+                tipo = "<OPERADOR_RELACIONAL>"
+            elif t == lexer.OPERADOR_LOGICO:
+                tipo = "<OPERADOR_LOGICO>"
+            elif t == lexer.OPERADOR_UNARIO:
+                tipo = "<OPERADOR_UNARIO>"
             elif t == lexer.PARA:
                 tipo = "<PARA>"
             elif t == lexer.PASSO:
@@ -145,6 +157,14 @@ def main(argv):
                 tipo = "<VETOR>"
             elif t == lexer.VIRGULA:
                 tipo = "<VIRGULA>"
+            elif t == lexer.BARRA_BARRA:
+                tipo = "<BARRA_BARRA>"
+            elif t == lexer.ESPACO:
+                tipo = "<ESPACO>"
+            elif t == lexer.QUEBRA_LINHA:
+                tipo = "<QUEBRA_LINHA>"
+            elif t == lexer.QUEBRA_LINHA:
+                tipo = "<QUEBRA_LINHA>"
             if tipo != '':
                 output.write(str((linha, tipo, token.text)) + "\n")
             else:

@@ -10,25 +10,17 @@ variaveis_locais:
 	(lista_de_variaveis DOIS_PONTOS tipo_da_variavel)*;
 
 procedimentos:
-	PROCEDIMENTO nome_do_procedimento parametros COMENTARIO* variaveis_locais INICIO expressoes* FIM_PROCEDIMENTO;
+	PROCEDIMENTO NOME_DO_PROCEDIMENTO parametros COMENTARIO* variaveis_locais INICIO expressoes* FIM_PROCEDIMENTO;
 
 funcoes: 
-	FUNCAO nome_da_funcao parametros DOIS_PONTOS TIPO_DE_DADO COMENTARIO* variaveis_locais INICIO expressoes* RETORNO (lista_de_variaveis|chamar_funcao)+ FIM_FUNCAO;
+	FUNCAO NOME_DA_FUNCAO parametros DOIS_PONTOS TIPO_DE_DADO COMENTARIO* variaveis_locais INICIO expressoes* RETORNO (lista_de_variaveis|chamar_funcao)+ FIM_FUNCAO;
 
 parametros: 
 	 ABRE_PARENTESES VAR? lista_de_variaveis DOIS_PONTOS TIPO_DE_DADO (PONTO_VIRGULA VAR? lista_de_variaveis DOIS_PONTOS TIPO_DE_DADO)* FECHA_PARENTESES;
 
-nome_do_procedimento: 
-	NOME_DA_VARIAVEL;
-nome_da_funcao: 
-	NOME_DA_VARIAVEL;
-
 //falta adicionar a função DEBUG
-expressoes:
-	chamar_procedimento
-	| chamar_funcao
-	| atribuicao 
-	| escreva
+expressoes: 
+	escreva
 	| leia 
 	| desvio_condicional 
 	| selecao_multipla 
@@ -43,15 +35,18 @@ expressoes:
 	| PAUSA
 	| ECO
 	| CRONOMETRO
-	| LIMPATELA;
+	| LIMPATELA
+	| chamar_procedimento
+	| chamar_funcao
+	| constCaractere
+	| constNumerico
+	| constBool;
 
 chamar_funcao: 
-	nome_da_funcao ABRE_PARENTESES (lista_de_variaveis|chamar_funcao)+ FECHA_PARENTESES;
+	NOME_DA_FUNCAO ABRE_PARENTESES (lista_de_variaveis|chamar_funcao)+ FECHA_PARENTESES;
 
 chamar_procedimento: 
-	nome_do_procedimento ABRE_PARENTESES (lista_de_variaveis|chamar_funcao)* FECHA_PARENTESES;
-
-atribuicao: constCaractere | constNumerico | constBool;
+	NOME_DA_FUNCAO ABRE_PARENTESES (lista_de_variaveis|chamar_funcao)* FECHA_PARENTESES;
 
 constCaractere: 
     NOME_DA_VARIAVEL ATRIBUIR STRING;
@@ -69,19 +64,19 @@ leia:
 	LEIA ABRE_PARENTESES lista_de_variaveis FECHA_PARENTESES;
 
 desvio_condicional:
-	SE expressao_logica ENTAO expressoes (SENAO expressoes)? FIM_SE;
+	SE expressao_logica ENTAO expressoes* QUEBRA_LINHA* (SENAO expressoes* QUEBRA_LINHA*)? FIM_SE;
 
 selecao_multipla:
-	ESCOLHA NOME_DA_VARIAVEL (CASO selecao_escolha expressoes) + (OUTRO_CASO expressoes)? FIM_ESCOLHA;
+	ESCOLHA NOME_DA_VARIAVEL (CASO selecao_escolha expressoes* QUEBRA_LINHA*) + (OUTRO_CASO expressoes* QUEBRA_LINHA*)? FIM_ESCOLHA;
 
 para_faca:
-	PARA NOME_DA_VARIAVEL DE DIGIT* ATE DIGIT* (PASSO incremento)? FACA expressoes FIM_PARA;
+	PARA NOME_DA_VARIAVEL DE DIGIT+ ATE DIGIT+ (PASSO incremento)? FACA expressoes* QUEBRA_LINHA* FIM_PARA;
 
 enquanto_faca: 
-	ENQUANTO expressao_logica FACA expressoes FIM_ENQUANTO;
+	ENQUANTO expressao_logica FACA expressoes* QUEBRA_LINHA* FIM_ENQUANTO;
 
 repita_ate:
-	REPITA expressoes ATE expressao_logica;
+	REPITA expressoes* QUEBRA_LINHA* ATE expressao_logica;
 
 aleatorio: 
 	ALEATORIO (ABRE_COLCHETES ON FECHA_COLCHETES | ABRE_COLCHETES OFF FECHA_COLCHETES | DIGIT* VIRGULA? DIGIT);
@@ -92,6 +87,7 @@ timer: TIMER (ABRE_COLCHETES ON FECHA_COLCHETES | ABRE_COLCHETES OFF FECHA_COLCH
 
 lista_de_variaveis: 
 	NOME_DA_VARIAVEL (VIRGULA NOME_DA_VARIAVEL)*;
+
 lista_de_intervalo: 
 	ABRE_COLCHETES intervalo FECHA_COLCHETES;
 
@@ -124,7 +120,7 @@ selecao_escolha:
 	INTEIRO | REAL | STRING | BOOL;
 
 incremento: 
-	MENOS? DIGIT+;
+	'-'? DIGIT+;
 
 // DIGIT
 fragment DIGIT: [0-9];
@@ -140,10 +136,9 @@ OPERADOR_UNARIO: '+'| '-';
 
 //IDS
 INICIO: 'inicio';
-FIM_ALGORITMO: 'fimAlgoritmo';
+FIM_ALGORITMO: 'fimalgoritmo';
 ALGORITMO: 'algoritmo';
-NOME_DA_VARIAVEL: [a-zA-Z]+ [_a-zA-Z0-9]*;
-COMENTARIO: '//' (.)*? '\n' -> skip;
+COMENTARIO: BARRA_BARRA (.)*? QUEBRA_LINHA;
 STRING: ["][a-zA-Z0-9 $&+,:;=?@#|'<>.^*()%-]+ ["];
 VETOR: 'vetor';
 DE: 'de';
@@ -195,3 +190,9 @@ DOIS_PONTOS: ':';
 ALEATORIO: 'aleatorio';
 TIMER: 'timer';
 PASSO: 'passo';
+QUEBRA_LINHA: '\n';
+BARRA_BARRA: '//';
+NOME_DA_VARIAVEL: [a-zA-Z]+ [_a-zA-Z0-9]*;
+NOME_DO_PROCEDIMENTO: [a-zA-Z]+ [_a-zA-Z0-9]*;
+NOME_DA_FUNCAO: [a-zA-Z]+ [_a-zA-Z0-9]*;
+ESPACO: ' ';

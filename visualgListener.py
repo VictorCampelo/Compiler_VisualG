@@ -62,24 +62,6 @@ class visualgListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by visualgParser#nome_do_procedimento.
-    def enterNome_do_procedimento(self, ctx:visualgParser.Nome_do_procedimentoContext):
-        pass
-
-    # Exit a parse tree produced by visualgParser#nome_do_procedimento.
-    def exitNome_do_procedimento(self, ctx:visualgParser.Nome_do_procedimentoContext):
-        pass
-
-
-    # Enter a parse tree produced by visualgParser#nome_da_funcao.
-    def enterNome_da_funcao(self, ctx:visualgParser.Nome_da_funcaoContext):
-        pass
-
-    # Exit a parse tree produced by visualgParser#nome_da_funcao.
-    def exitNome_da_funcao(self, ctx:visualgParser.Nome_da_funcaoContext):
-        pass
-
-
     # Enter a parse tree produced by visualgParser#expressoes.
     def enterExpressoes(self, ctx:visualgParser.ExpressoesContext):
         pass
@@ -104,15 +86,6 @@ class visualgListener(ParseTreeListener):
 
     # Exit a parse tree produced by visualgParser#chamar_procedimento.
     def exitChamar_procedimento(self, ctx:visualgParser.Chamar_procedimentoContext):
-        pass
-
-
-    # Enter a parse tree produced by visualgParser#atribuicao.
-    def enterAtribuicao(self, ctx:visualgParser.AtribuicaoContext):
-        pass
-
-    # Exit a parse tree produced by visualgParser#atribuicao.
-    def exitAtribuicao(self, ctx:visualgParser.AtribuicaoContext):
         pass
 
 
