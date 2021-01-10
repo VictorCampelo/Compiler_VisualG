@@ -89,8 +89,8 @@ def main(argv):
                 tipo = "<FIM_PROCEDIMENTO>"
             elif t == lexer.FIM_SE:
                 tipo = "<FIM_SE>"
-            elif t == lexer.FUNCAO:
-                tipo = "<FUNCAO>"
+            # elif t == lexer.FUNCAO:
+            #     tipo = "<FUNCAO>"
             elif t == lexer.INICIO:
                 tipo = "<INICIO>"
             elif t == lexer.INTEIRO:
@@ -105,12 +105,12 @@ def main(argv):
                 tipo = "<MENOS>"
             elif t == lexer.NOME_ARQUIVO:
                 tipo = "<NOME_ARQUIVO>"
-            elif t == lexer.NOME_DA_VARIAVEL:
-                tipo = "<NOME_DA_VARIAVEL>"
-            elif t == lexer.NOME_DO_PROCEDIMENTO:
-                tipo = "<NOME_DO_PROCEDIMENTO>"
-            elif t == lexer.NOME_DA_FUNCAO:
-                tipo = "<NOME_DA_FUNCAO>"
+            elif t == lexer.VARIAVEL:
+                tipo = "<VARIAVEL>"
+            elif t == lexer.DECLARACAO_PROCEDIMENTO:
+                tipo = "<DECLARACAO_PROCEDIMENTO>"
+            elif t == lexer.DECLARACAO_FUNCAO:
+                tipo = "<DECLARACAO_FUNCAO>"
             elif t == lexer.OFF:
                 tipo = "<OFF>"
             elif t == lexer.ON:
@@ -165,6 +165,8 @@ def main(argv):
                 tipo = "<QUEBRA_LINHA>"
             elif t == lexer.QUEBRA_LINHA:
                 tipo = "<QUEBRA_LINHA>"
+            elif t == lexer.TIPO_DE_DADO:
+                tipo = "<TIPO_DE_DADO>"
             if tipo != '':
                 output.write(str((linha, tipo, token.text)) + "\n")
             else:
