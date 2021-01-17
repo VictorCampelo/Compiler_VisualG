@@ -4,7 +4,7 @@ algoritmo "Desvio condicional composto"
 // Data: 22/12/2020
 // Seção de Declarações
  
- //VAR GLOBAIS
+//VAR GLOBAIS
 var a: inteiro
 Valor1, Valor2: real
 vet: vetor [1..10] de real
@@ -14,9 +14,9 @@ sinalizador: logico
 
 //constantes
 a <- 3
-Valor1 <- 1.5
-Valor2 <- Valor1 + a
-vet[1] <- vet[1] + (a * 3)
+Valor1 <- FALSO
+Valor2 <- Valor1 + a + a
+vet[1] <- vet[1] / (a * 3)
 matriz[3,9] <- a/4 - 5
 nome_do_aluno <- "Jose da Silva"
 sinalizador <- FALSO
@@ -28,10 +28,12 @@ y <- 6
 a <- "teste"
 l <- VERDADEIRO
 
-escreval ("x", x:4:1, y+3:4) // Escreve: x 2.5 9
+escreval ("x", x:4:1, y+3:4) // Escreva: x 2.5 9
 escreval (a, "ok") // Escreve: testeok (e depois pula linha)
 escreval (a, " ok") // Escreve: teste ok (e depois pula linha)
 escreval (a + " ok") // Escreve: teste ok (e depois pula linha)
+escreval ("ok" + a) // Escreve: teste ok (e depois pula linha)
+escreval ("ok" + "a") // Escreve: teste ok (e depois pula linha)
 escreva (l) // Escreve: VERDADEIRO
 
 escreva ("Informe o nome do aluno: ")
@@ -41,7 +43,7 @@ leia (nota1)
 escreva ("Informe a nota da P2: ")
 leia (nota2)
  
-media <- (nota1 + nota2) / 2
+media <- (nota1 - nota2) / 2
  
 se  media >= 7 e media <=2  entao
 
