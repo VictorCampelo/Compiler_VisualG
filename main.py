@@ -1,25 +1,51 @@
-from antlr4 import FileStream
-from antlr4 import CommonTokenStream
-from antlr4 import ParseTreeWalker
-from antlr4 import Token
-from antlr4.tree.Trees import Trees
-from visualgLexer import visualgLexer
+# coding: utf-8
+
+from antlr4.tree.Tree import TerminalNodeImpl
 from visualgListener import visualgListener
+from antlr4 import CommonTokenStream
+from antlr4.tree.Trees import Trees
 from visualgParser import visualgParser
-import os
+from antlr4 import ParseTreeWalker
+from visualgLexer import visualgLexer
+from antlr4 import FileStream
+from antlr4 import Token
 import sys
+import io
+import os
 
 
-class visualgPrintListener(visualgListener):
-    def func(self):
-        pass
+representacao_arvore = ""
+
+
+def clear():
+    if os.name == 'nt':
+        os.system('cls')
+    else:
+        os.system('clear')
+
+
+def gerar_arvore(tree, rule_names, indent=0):
+    global representacao_arvore
+    if tree.getText() == "<EOF>":
+        return
+    elif isinstance(tree, TerminalNodeImpl):
+        representacao_arvore += ("    "*indent) + \
+            f"TOKEN='{tree.getText()}'" + '\n'
+    else:
+        representacao_arvore += ("    "*indent) + \
+            f"{rule_names[tree.getRuleIndex()]}" + '\n'
+        for child in tree.children:
+            gerar_arvore(child, rule_names, indent + 1)
+
 
 def main(argv):
+    global representacao_arvore
+
     os.system('clear')
 
-    output = open("saida.txt", "w")
-
     input_stream = FileStream(argv[1], encoding='utf-8')
+    output = open(argv[1]+".txt", "w")
+
     output.write("ARQUIVO ------------------------------------\n")
     output.write(str(input_stream) + "\n")
     output.write("--------------------------------------------\n\n")
@@ -159,14 +185,10 @@ def main(argv):
                 tipo = "<VIRGULA>"
             elif t == lexer.BARRA_BARRA:
                 tipo = "<BARRA_BARRA>"
-            elif t == lexer.ESPACO:
-                tipo = "<ESPACO>"
-            elif t == lexer.QUEBRA_LINHA:
-                tipo = "<QUEBRA_LINHA>"
-            elif t == lexer.QUEBRA_LINHA:
-                tipo = "<QUEBRA_LINHA>"
             elif t == lexer.TIPO_DE_DADO:
                 tipo = "<TIPO_DE_DADO>"
+            elif t == lexer.CHAMAR_FUNCAO_PROCEDIMENTO:
+                tipo = "<CHAMAR_FUNCAO_PROCEDIMENTO>"
             if tipo != '':
                 output.write(str((linha, tipo, token.text)) + "\n")
             else:
@@ -174,9 +196,28 @@ def main(argv):
         else:
             break
 
+
     output.write("--------------------------------------------\n\n")
-   
+    # Analisador Sintático
+    input_stream = FileStream(argv[1], encoding='utf-8')
+    lexer = visualgLexer(input_stream)
+    tokens = CommonTokenStream(lexer)
+    parser = visualgParser(tokens)
+    tree = parser.prog()
+    # gerar_arvore(tree, parser.ruleNames)
+    print("ARVORE SINTÁTICA (toStringTree) -----------\n")
+    output.write("ARVORE SINTÁTICA (toStringTree) -----------\n")
+
+    output.write(str(Trees.toStringTree(tree, None, parser)) + "\n")
+    print(str(Trees.toStringTree(tree, None, parser)) + "\n")
+
+    output.write("--------------------------------------------\n\n")
+    print("--------------------------------------------\n\n")
+
     output.close()
+
+    print("Cheque agora o arquivo saida.txt na mesma pasta deste projeto para ver a saída mais detalhada")
+
 
 if __name__ == '__main__':
     main(sys.argv)
