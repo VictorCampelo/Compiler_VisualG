@@ -1,7 +1,7 @@
 grammar visualg;
 
 prog: 
-	(ALGORITMO STRING COMENTARIO* variaveis_globais? (procedimentos | funcoes)* INICIO expressoes* FIM_ALGORITMO) EOF;
+	(ALGORITMO STRING (COMENTARIO|COMENTARIO_MULTILINHA)* variaveis_globais? (constCaractere| constNumerico	| constBool | constVet)* (procedimentos | funcoes)* INICIO  expressoes*  FIM_ALGORITMO) EOF;
 
 variaveis_globais: 
 	VAR (lista_de_variaveis DOIS_PONTOS tipo_da_variavel)*;
@@ -10,10 +10,10 @@ variaveis_locais:
 	(lista_de_variaveis DOIS_PONTOS tipo_da_variavel)*;
 
 procedimentos:
-	PROCEDIMENTO DECLARACAO_PROCEDIMENTO parametros COMENTARIO* variaveis_locais INICIO expressoes* FIM_PROCEDIMENTO;
+	PROCEDIMENTO DECLARACAO_PROCEDIMENTO parametros (COMENTARIO|COMENTARIO_MULTILINHA)* variaveis_locais INICIO expressoes* FIM_PROCEDIMENTO;
 
 funcoes: 
-	DECLARACAO_FUNCAO parametros DOIS_PONTOS TIPO_DE_DADO COMENTARIO* variaveis_locais INICIO expressoes* RETORNO (lista_de_variaveis|chamar_funcao)+ FIM_FUNCAO;
+	DECLARACAO_FUNCAO parametros DOIS_PONTOS TIPO_DE_DADO (COMENTARIO|COMENTARIO_MULTILINHA)* variaveis_locais INICIO expressoes* RETORNO (lista_de_variaveis|chamar_funcao)+ FIM_FUNCAO;
 
 parametros: 
 	 ABRE_PARENTESES VAR? lista_de_variaveis DOIS_PONTOS TIPO_DE_DADO (PONTO_VIRGULA VAR? lista_de_variaveis DOIS_PONTOS TIPO_DE_DADO)* FECHA_PARENTESES;
@@ -40,13 +40,14 @@ expressoes:
 	| chamar_funcao
 	| constCaractere
 	| constNumerico
+	| constVet
 	| constBool;
 
 chamar_funcao: 
-	DECLARACAO_FUNCAO ABRE_PARENTESES (lista_de_variaveis|chamar_funcao)+ FECHA_PARENTESES;
+	CHAMAR_FUNCAO_PROCEDIMENTO (lista_de_variaveis|chamar_funcao)+ FECHA_PARENTESES;
 
 chamar_procedimento: 
-	DECLARACAO_FUNCAO ABRE_PARENTESES (lista_de_variaveis|chamar_funcao)* FECHA_PARENTESES;
+	CHAMAR_FUNCAO_PROCEDIMENTO (lista_de_variaveis|chamar_funcao)* FECHA_PARENTESES;
 
 constCaractere: 
     VARIAVEL ATRIBUIR STRING;
@@ -57,33 +58,36 @@ constNumerico:
 constBool:
 	VARIAVEL ATRIBUIR BOOL;
 
+constVet:
+	MATRIZ ATRIBUIR calculo;
+
 escreva: 
-	ESCREVA ABRE_PARENTESES (STRING | calculo | print_variavel) (VIRGULA (STRING | calculo | print_variavel | VARIAVEL))* FECHA_PARENTESES;
+	ESCREVA ABRE_PARENTESES (STRING | calculo | print_variavel) ((VIRGULA|'+') (STRING | calculo | print_variavel | VARIAVEL))* FECHA_PARENTESES;
 
 leia:
 	LEIA ABRE_PARENTESES lista_de_variaveis FECHA_PARENTESES;
 
 desvio_condicional:
-	SE expressao_logica ENTAO expressoes* QUEBRA_LINHA* (SENAO expressoes* QUEBRA_LINHA*)? FIM_SE;
+	SE expressao_logica ENTAO expressoes* (SENAO expressoes*)? FIM_SE;
 
 selecao_multipla:
-	ESCOLHA VARIAVEL (CASO selecao_escolha expressoes* QUEBRA_LINHA*) + (OUTRO_CASO expressoes* QUEBRA_LINHA*)? FIM_ESCOLHA;
+	ESCOLHA VARIAVEL (CASO selecao_escolha expressoes*) + (OUTRO_CASO expressoes*)? FIM_ESCOLHA;
 
 para_faca:
-	PARA VARIAVEL DE DIGIT+ ATE DIGIT+ (PASSO incremento)? FACA expressoes* QUEBRA_LINHA* FIM_PARA;
+	PARA VARIAVEL DE INTEIRO+ ATE INTEIRO+ (PASSO incremento)? FACA expressoes* FIM_PARA;
 
 enquanto_faca: 
-	ENQUANTO expressao_logica FACA expressoes* QUEBRA_LINHA* FIM_ENQUANTO;
+	ENQUANTO expressao_logica FACA expressoes* FIM_ENQUANTO;
 
 repita_ate:
-	REPITA expressoes* QUEBRA_LINHA* ATE expressao_logica;
+	REPITA expressoes*  ATE expressao_logica;
 
 aleatorio: 
-	ALEATORIO (ABRE_COLCHETES ON FECHA_COLCHETES | ABRE_COLCHETES OFF FECHA_COLCHETES | DIGIT* VIRGULA? DIGIT);
+	ALEATORIO (ABRE_COLCHETES ON FECHA_COLCHETES | ABRE_COLCHETES OFF FECHA_COLCHETES | INTEIRO* VIRGULA? INTEIRO);
 
 arquivo: ARQUIVO NOME_ARQUIVO;
 
-timer: TIMER (ABRE_COLCHETES ON FECHA_COLCHETES | ABRE_COLCHETES OFF FECHA_COLCHETES | DIGIT*);
+timer: TIMER (ABRE_COLCHETES ON FECHA_COLCHETES | ABRE_COLCHETES OFF FECHA_COLCHETES | INTEIRO*);
 
 lista_de_variaveis: 
 	VARIAVEL (VIRGULA VARIAVEL)*;
@@ -98,29 +102,35 @@ tipo_vetor:
 	VETOR lista_de_intervalo DE TIPO_DE_DADO;
 
 intervalo: 
-	DIGIT+ PONTO_PONTO DIGIT+ (VIRGULA DIGIT+ PONTO_PONTO DIGIT)*;
+	INTEIRO+ PONTO_PONTO INTEIRO+ (VIRGULA INTEIRO+ PONTO_PONTO INTEIRO)*;
 
 print_variavel: 
-	VARIAVEL (DOIS_PONTOS DIGIT+){ ,2};
+	calculo (DOIS_PONTOS INTEIRO+)(DOIS_PONTOS INTEIRO+)?;
 
 calculo: 
 	(expressao_aritmetica | expressao_logica);
 
 expressao_aritmetica:
-	ABRE_PARENTESES? OPERADOR_UNARIO? selecao_aritmetica (OPERADOR_BINARIO ABRE_PARENTESES? OPERADOR_UNARIO? selecao_aritmetica FECHA_PARENTESES?)* FECHA_PARENTESES?;
+	ABRE_PARENTESES? 
+		OPERADOR_UNARIO? selecao_aritmetica 
+		((OPERADOR_BINARIO|'+') 
+		ABRE_PARENTESES? 
+			OPERADOR_UNARIO? selecao_aritmetica 
+		FECHA_PARENTESES?)* 
+	FECHA_PARENTESES?;
 
 expressao_logica:
-	ABRE_PARENTESES? OPERADOR_UNARIO? selecao_logica (OPERADOR_RELACIONAL ABRE_PARENTESES? OPERADOR_LOGICO? OPERADOR_UNARIO? selecao_logica FECHA_PARENTESES?)* FECHA_PARENTESES?;
+	ABRE_PARENTESES? OPERADOR_UNARIO? selecao_logica (OPERADOR_RELACIONAL ABRE_PARENTESES? OPERADOR_UNARIO? selecao_logica FECHA_PARENTESES? (OPERADOR_LOGICO selecao_logica (OPERADOR_RELACIONAL ABRE_PARENTESES? OPERADOR_UNARIO? selecao_logica FECHA_PARENTESES?)?)*)? FECHA_PARENTESES?;
 
 selecao_aritmetica: 
-	VARIAVEL| INTEIRO | REAL;
+	VARIAVEL | INTEIRO | REAL | MATRIZ;
 selecao_logica: 
-	VARIAVEL| INTEIRO | REAL | BOOL;
+	VARIAVEL | INTEIRO | REAL | BOOL;
 selecao_escolha: 
 	INTEIRO | REAL | STRING | BOOL;
 
 incremento: 
-	'-'? DIGIT+;
+	'-'? INTEIRO+;
 
 // DIGIT
 fragment DIGIT: [0-9];
@@ -128,7 +138,8 @@ fragment DIGIT: [0-9];
 TIPO_DE_DADO: 'inteiro' | 'real' | 'caractere' | 'logico';
 
 //OPERADORES
-//ERRO COM '%', VERIFICAR COMO TRATAR
+//ERRO COM '%', VERIFICAR COMO TRATAR "\" E "^"
+
 OPERADOR_BINARIO: '+'| '-' | '*' | '/' | 'mod';
 OPERADOR_RELACIONAL: '>' | '<' | '<=' | '>=' | '=' | '<>';
 OPERADOR_LOGICO: 'nao' | 'ou' | 'e' | 'xou';
@@ -138,9 +149,11 @@ OPERADOR_UNARIO: '+'| '-';
 INICIO: 'inicio';
 FIM_ALGORITMO: 'fimalgoritmo';
 ALGORITMO: 'algoritmo';
-COMENTARIO: BARRA_BARRA (.)*? QUEBRA_LINHA;
+COMENTARIO: '//' (.)*? '\n' -> skip;
+COMENTARIO_MULTILINHA: '/*' (.)*? '*/' -> skip;
 STRING: ["][a-zA-Z0-9 $&+,:;=?@#|'<>.^*()%-]+ ["];
 VETOR: 'vetor';
+MATRIZ: VARIAVEL ABRE_COLCHETES INTEIRO (VIRGULA INTEIRO)* FECHA_COLCHETES;
 DE: 'de';
 ABRE_COLCHETES: '[';
 FECHA_COLCHETES: ']';
@@ -148,8 +161,8 @@ ABRE_PARENTESES: '(';
 FECHA_PARENTESES: ')';
 VIRGULA: ',';
 ATRIBUIR: '<-';
-INTEIRO: DIGIT+;
-REAL: DIGIT+ ([.]DIGIT+)?;
+INTEIRO: [-]? DIGIT+;
+REAL: [-]? DIGIT+ ([.]DIGIT+)?;
 BOOL: 'FALSO' | 'VERDADEIRO';
 PONTO_PONTO: '..';
 ESCREVA: 'escreva' | 'escreval';
@@ -189,9 +202,10 @@ DOIS_PONTOS: ':';
 ALEATORIO: 'aleatorio';
 TIMER: 'timer';
 PASSO: 'passo';
-QUEBRA_LINHA: '\n';
 BARRA_BARRA: '//';
 VARIAVEL: [a-zA-Z]+ [_a-zA-Z0-9]*;
-DECLARACAO_PROCEDIMENTO: 'procedimento' ESPACO+ [a-zA-Z]+ [_a-zA-Z0-9]*;
-DECLARACAO_FUNCAO: 'funcao' ESPACO+ [a-zA-Z]+ [_a-zA-Z0-9]*;
-ESPACO: ' ';
+DECLARACAO_PROCEDIMENTO: 'procedimento' [a-zA-Z]+ [_a-zA-Z0-9]*;
+DECLARACAO_FUNCAO: 'funcao' [a-zA-Z]+ [_a-zA-Z0-9]*;
+CHAMAR_FUNCAO_PROCEDIMENTO: [a-zA-Z]+ [_a-zA-Z0-9]*'(';
+WS : [ \t\r\n]+ -> skip ;
+ENTER : '\r'? '\n' -> skip ;

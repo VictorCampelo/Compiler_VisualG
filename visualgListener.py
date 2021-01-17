@@ -116,6 +116,15 @@ class visualgListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by visualgParser#constVet.
+    def enterConstVet(self, ctx:visualgParser.ConstVetContext):
+        pass
+
+    # Exit a parse tree produced by visualgParser#constVet.
+    def exitConstVet(self, ctx:visualgParser.ConstVetContext):
+        pass
+
+
     # Enter a parse tree produced by visualgParser#escreva.
     def enterEscreva(self, ctx:visualgParser.EscrevaContext):
         pass
