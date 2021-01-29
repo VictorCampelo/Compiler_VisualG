@@ -9,11 +9,8 @@ variaveis_globais:
 variaveis_locais: 
 	(lista_de_variaveis DOIS_PONTOS tipo_da_variavel)*;
 
-procedimentos:
-	PROCEDIMENTO DECLARACAO_PROCEDIMENTO parametros (COMENTARIO|COMENTARIO_MULTILINHA)* variaveis_locais INICIO expressoes* FIM_PROCEDIMENTO;
-
 funcoes: 
-	DECLARACAO_FUNCAO parametros DOIS_PONTOS TIPO_DE_DADO (COMENTARIO|COMENTARIO_MULTILINHA)* variaveis_locais INICIO expressoes* RETORNO (lista_de_variaveis|chamar_funcao)+ FIM_FUNCAO;
+	DECLARACAO_FUNCAO parametros DOIS_PONTOS TIPO_DE_DADO (COMENTARIO|COMENTARIO_MULTILINHA)* variaveis_locais INICIO expressoes* RETORNO (lista_de_variaveis|chamar_funcao|VOID)+ FIM_FUNCAO;
 
 parametros: 
 	 ABRE_PARENTESES VAR? lista_de_variaveis DOIS_PONTOS TIPO_DE_DADO (PONTO_VIRGULA VAR? lista_de_variaveis DOIS_PONTOS TIPO_DE_DADO)* FECHA_PARENTESES;
@@ -36,7 +33,6 @@ expressoes:
 	| ECO
 	| CRONOMETRO
 	| LIMPATELA
-	| chamar_procedimento
 	| chamar_funcao
 	| constCaractere
 	| constNumerico
@@ -45,9 +41,6 @@ expressoes:
 
 chamar_funcao: 
 	CHAMAR_FUNCAO_PROCEDIMENTO (lista_de_variaveis|chamar_funcao)+ FECHA_PARENTESES;
-
-chamar_procedimento: 
-	CHAMAR_FUNCAO_PROCEDIMENTO (lista_de_variaveis|chamar_funcao)* FECHA_PARENTESES;
 
 constCaractere: 
     VARIAVEL ATRIBUIR STRING;
@@ -140,7 +133,7 @@ TIPO_DE_DADO: 'inteiro' | 'real' | 'caractere' | 'logico';
 //OPERADORES
 //ERRO COM '%', VERIFICAR COMO TRATAR "\" E "^"
 
-OPERADOR_BINARIO: '+'| '-' | '*' | '/' | 'mod';
+OPERADOR_BINARIO: '+'| '-' | '*' | '/' | '^' | '\' | '%' | 'mod';
 OPERADOR_RELACIONAL: '>' | '<' | '<=' | '>=' | '=' | '<>';
 OPERADOR_LOGICO: 'nao' | 'ou' | 'e' | 'xou';
 OPERADOR_UNARIO: '+'| '-';
@@ -184,8 +177,6 @@ REPITA: 'repita';
 ENQUANTO: 'enquanto';
 FIM_ENQUANTO: 'fimenquanto';
 INTERROMPA: 'interrompa';
-PROCEDIMENTO: 'procedimento';
-FIM_PROCEDIMENTO: 'fimprocedimento';
 RETORNO: 'retorne';
 FIM_FUNCAO: 'fimfuncao';
 PONTO_VIRGULA: ';';
@@ -204,8 +195,8 @@ TIMER: 'timer';
 PASSO: 'passo';
 BARRA_BARRA: '//';
 VARIAVEL: [a-zA-Z]+ [_a-zA-Z0-9]*;
-DECLARACAO_PROCEDIMENTO: 'procedimento' [a-zA-Z]+ [_a-zA-Z0-9]*;
 DECLARACAO_FUNCAO: 'funcao' [a-zA-Z]+ [_a-zA-Z0-9]*;
 CHAMAR_FUNCAO_PROCEDIMENTO: [a-zA-Z]+ [_a-zA-Z0-9]*'(';
 WS : [ \t\r\n]+ -> skip ;
 ENTER : '\r'? '\n' -> skip ;
+VOID: 'void';
