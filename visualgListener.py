@@ -1,4 +1,4 @@
-# Generated from visualg.g4 by ANTLR 4.8
+# Generated from visualg.g4 by ANTLR 4.9.1
 from antlr4 import *
 if __name__ is not None and "." in __name__:
     from .visualgParser import visualgParser
@@ -35,15 +35,6 @@ class visualgListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by visualgParser#procedimentos.
-    def enterProcedimentos(self, ctx:visualgParser.ProcedimentosContext):
-        pass
-
-    # Exit a parse tree produced by visualgParser#procedimentos.
-    def exitProcedimentos(self, ctx:visualgParser.ProcedimentosContext):
-        pass
-
-
     # Enter a parse tree produced by visualgParser#funcoes.
     def enterFuncoes(self, ctx:visualgParser.FuncoesContext):
         pass
@@ -77,15 +68,6 @@ class visualgListener(ParseTreeListener):
 
     # Exit a parse tree produced by visualgParser#chamar_funcao.
     def exitChamar_funcao(self, ctx:visualgParser.Chamar_funcaoContext):
-        pass
-
-
-    # Enter a parse tree produced by visualgParser#chamar_procedimento.
-    def enterChamar_procedimento(self, ctx:visualgParser.Chamar_procedimentoContext):
-        pass
-
-    # Exit a parse tree produced by visualgParser#chamar_procedimento.
-    def exitChamar_procedimento(self, ctx:visualgParser.Chamar_procedimentoContext):
         pass
 
 

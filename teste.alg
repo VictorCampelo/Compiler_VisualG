@@ -17,9 +17,19 @@ a <- 3
 Valor1 <- FALSO
 Valor2 <- Valor1 + a + a
 vet[1] <- vet[1] / (a * 3)
-matriz[3,9] <- a/4 - 5
+matriz[3,9] <- a/4 * 5
 nome_do_aluno <- "Jose da Silva"
 sinalizador <- FALSO
+
+funcao    soma(x,y: inteiro): inteiro
+    inicio
+    retorne x + y
+    fimfuncao
+
+funcao vazio (x,y: inteiro): void
+    inicio
+    retorne void
+    fimfuncao
 
 inicio
 // Seção de Comandos

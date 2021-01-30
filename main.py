@@ -17,11 +17,11 @@ import os
 representacao_arvore = ""
 
 
-def clear():
-    if os.name == 'nt':
-        os.system('cls')
-    else:
-        os.system('clear')
+#def clear():
+#    if os.name == 'nt':
+#        os.system('cls')
+#    else:
+#        os.system('clear')
 
 
 def gerar_arvore(tree, rule_names, indent=0):
@@ -41,7 +41,7 @@ def gerar_arvore(tree, rule_names, indent=0):
 def main(argv):
     global representacao_arvore
 
-    os.system('clear')
+    #os.system('clear')
 
     input_stream = FileStream(argv[1], encoding='utf-8')
     output = open(argv[1]+".txt", "w")
@@ -111,8 +111,6 @@ def main(argv):
                 tipo = "<FIM_FUNCAO>"
             elif t == lexer.FIM_PARA:
                 tipo = "<FIM_PARA>"
-            elif t == lexer.FIM_PROCEDIMENTO:
-                tipo = "<FIM_PROCEDIMENTO>"
             elif t == lexer.FIM_SE:
                 tipo = "<FIM_SE>"
             # elif t == lexer.FUNCAO:
@@ -127,14 +125,10 @@ def main(argv):
                 tipo = "<LEIA>"
             elif t == lexer.LIMPATELA:
                 tipo = "<LIMPATELA>"
-            elif t == lexer.MENOS:
-                tipo = "<MENOS>"
             elif t == lexer.NOME_ARQUIVO:
                 tipo = "<NOME_ARQUIVO>"
             elif t == lexer.VARIAVEL:
                 tipo = "<VARIAVEL>"
-            elif t == lexer.DECLARACAO_PROCEDIMENTO:
-                tipo = "<DECLARACAO_PROCEDIMENTO>"
             elif t == lexer.DECLARACAO_FUNCAO:
                 tipo = "<DECLARACAO_FUNCAO>"
             elif t == lexer.OFF:
@@ -161,8 +155,6 @@ def main(argv):
                 tipo = "<PONTO_PONTO>"
             elif t == lexer.PONTO_VIRGULA:
                 tipo = "<PONTO_VIRGULA>"
-            elif t == lexer.PROCEDIMENTO:
-                tipo = "<PROCEDIMENTO>"
             elif t == lexer.REAL:
                 tipo = "<REAL>"
             elif t == lexer.REPITA:
@@ -185,10 +177,10 @@ def main(argv):
                 tipo = "<VIRGULA>"
             elif t == lexer.BARRA_BARRA:
                 tipo = "<BARRA_BARRA>"
+            elif t == lexer.VOID:
+                tipo = "<VOID>"
             elif t == lexer.TIPO_DE_DADO:
                 tipo = "<TIPO_DE_DADO>"
-            elif t == lexer.CHAMAR_FUNCAO_PROCEDIMENTO:
-                tipo = "<CHAMAR_FUNCAO_PROCEDIMENTO>"
             if tipo != '':
                 output.write(str((linha, tipo, token.text)) + "\n")
             else:
