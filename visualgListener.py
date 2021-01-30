@@ -206,6 +206,15 @@ class visualgListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by visualgParser#lista_numeros.
+    def enterLista_numeros(self, ctx:visualgParser.Lista_numerosContext):
+        pass
+
+    # Exit a parse tree produced by visualgParser#lista_numeros.
+    def exitLista_numeros(self, ctx:visualgParser.Lista_numerosContext):
+        pass
+
+
     # Enter a parse tree produced by visualgParser#lista_de_intervalo.
     def enterLista_de_intervalo(self, ctx:visualgParser.Lista_de_intervaloContext):
         pass

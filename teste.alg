@@ -16,12 +16,15 @@ sinalizador: logico
 a <- 3
 Valor1 <- FALSO
 Valor2 <- Valor1 + a + a
+Valor3 <- Valor1 \ 5
+Valor4 <- Valor1 mod 3
+Valor2 <- a ^ 4
 vet[1] <- vet[1] / (a * 3)
-matriz[3,9] <- a/4 * 5
+matriz[3,9] <- a/4 - 5
 nome_do_aluno <- "Jose da Silva"
 sinalizador <- FALSO
 
-funcao    soma(x,y: inteiro): inteiro
+funcao soma(x,y: inteiro): inteiro
     inicio
     retorne x + y
     fimfuncao
@@ -56,10 +59,11 @@ leia (nota2)
 media <- (nota1 - nota2) / 2
  
 se  media >= 7 e media <=2  entao
-
+    x <- soma(media, nota1)
 
 fimse
 
+vazio(5,8)
 enquanto j <= 10 faca
 
 fimenquanto

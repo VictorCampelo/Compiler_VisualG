@@ -197,8 +197,8 @@ def main(argv):
     parser = visualgParser(tokens)
     tree = parser.prog()
     # gerar_arvore(tree, parser.ruleNames)
-    print("ARVORE SINTÁTICA (toStringTree) -----------\n")
-    output.write("ARVORE SINTÁTICA (toStringTree) -----------\n")
+    print("ARVORE SINTÁTICA -----------\n")
+    output.write("ARVORE SINTÁTICA -----------\n")
 
     output.write(str(Trees.toStringTree(tree, None, parser)) + "\n")
     print(str(Trees.toStringTree(tree, None, parser)) + "\n")

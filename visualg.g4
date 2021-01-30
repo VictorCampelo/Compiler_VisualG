@@ -40,7 +40,7 @@ expressoes:
 	| constBool;
 
 chamar_funcao: 
-	VARIAVEL (lista_de_variaveis|chamar_funcao)+ FECHA_PARENTESES;
+	VARIAVEL ABRE_PARENTESES (lista_numeros|lista_de_variaveis|chamar_funcao)+ FECHA_PARENTESES;
 
 constCaractere: 
     VARIAVEL ATRIBUIR STRING;
@@ -85,6 +85,9 @@ timer: TIMER (ABRE_COLCHETES ON FECHA_COLCHETES | ABRE_COLCHETES OFF FECHA_COLCH
 lista_de_variaveis: 
 	VARIAVEL (VIRGULA VARIAVEL)*;
 
+lista_numeros: 
+	(selecao_aritmetica|BOOL) (VIRGULA (selecao_aritmetica|BOOL))*;
+
 lista_de_intervalo: 
 	ABRE_COLCHETES intervalo FECHA_COLCHETES;
 
@@ -101,7 +104,7 @@ print_variavel:
 	calculo (DOIS_PONTOS INTEIRO+)(DOIS_PONTOS INTEIRO+)?;
 
 calculo: 
-	(expressao_aritmetica | expressao_logica);
+	(expressao_aritmetica | expressao_logica | chamar_funcao);
 
 expressao_aritmetica:
 	ABRE_PARENTESES? 
