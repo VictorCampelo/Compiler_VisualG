@@ -11,7 +11,7 @@ else:
 
 def serializedATN():
     with StringIO() as buf:
-        buf.write("\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3D")
+        buf.write("\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3P")
         buf.write("\u022a\4\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7")
         buf.write("\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t\13\4\f\t\f\4\r\t\r\4\16")
         buf.write("\t\16\4\17\t\17\4\20\t\20\4\21\t\21\4\22\t\22\4\23\t\23")
@@ -70,64 +70,64 @@ def serializedATN():
         buf.write("\13 \5 \u0217\n \3 \5 \u021a\n \3!\3!\3\"\3\"\3#\3#\3")
         buf.write("$\5$\u0223\n$\3$\6$\u0226\n$\r$\16$\u0227\3$\2\2%\2\4")
         buf.write("\6\b\n\f\16\20\22\24\26\30\32\34\36 \"$&(*,.\60\62\64")
-        buf.write("\668:<>@BDF\2\t\3\2\16\17\4\2\5\5\r\r\4\2\3\3\30\30\4")
-        buf.write("\2\3\4\6\6\5\2\22\22\32\33BB\4\2\32\34BB\4\2\20\20\32")
-        buf.write("\34\2\u0274\2H\3\2\2\2\4h\3\2\2\2\6x\3\2\2\2\b{\3\2\2")
-        buf.write("\2\n\u00a3\3\2\2\2\f\u00ce\3\2\2\2\16\u00d0\3\2\2\2\20")
-        buf.write("\u00db\3\2\2\2\22\u00df\3\2\2\2\24\u00e3\3\2\2\2\26\u00e7")
-        buf.write("\3\2\2\2\30\u00eb\3\2\2\2\32\u0100\3\2\2\2\34\u0105\3")
-        buf.write("\2\2\2\36\u0119\3\2\2\2 \u0132\3\2\2\2\"\u014d\3\2\2\2")
-        buf.write("$\u0158\3\2\2\2&\u0162\3\2\2\2(\u0175\3\2\2\2*\u0178\3")
-        buf.write("\2\2\2,\u0187\3\2\2\2.\u0191\3\2\2\2\60\u019d\3\2\2\2")
-        buf.write("\62\u01a3\3\2\2\2\64\u01a5\3\2\2\2\66\u01ab\3\2\2\28\u01c2")
-        buf.write("\3\2\2\2:\u01d4\3\2\2\2<\u01d7\3\2\2\2>\u01f1\3\2\2\2")
-        buf.write("@\u021b\3\2\2\2B\u021d\3\2\2\2D\u021f\3\2\2\2F\u0222\3")
-        buf.write("\2\2\2HI\7\f\2\2IM\7\20\2\2JL\t\2\2\2KJ\3\2\2\2LO\3\2")
-        buf.write("\2\2MK\3\2\2\2MN\3\2\2\2NQ\3\2\2\2OM\3\2\2\2PR\5\4\3\2")
-        buf.write("QP\3\2\2\2QR\3\2\2\2RZ\3\2\2\2SY\5\20\t\2TY\5\22\n\2U")
-        buf.write("Y\5\24\13\2VY\5\26\f\2WY\5\b\5\2XS\3\2\2\2XT\3\2\2\2X")
-        buf.write("U\3\2\2\2XV\3\2\2\2XW\3\2\2\2Y\\\3\2\2\2ZX\3\2\2\2Z[\3")
-        buf.write("\2\2\2[]\3\2\2\2\\Z\3\2\2\2]a\7\n\2\2^`\5\f\7\2_^\3\2")
-        buf.write("\2\2`c\3\2\2\2a_\3\2\2\2ab\3\2\2\2bd\3\2\2\2ca\3\2\2\2")
-        buf.write("de\7\13\2\2ef\3\2\2\2fg\7\2\2\3g\3\3\2\2\2ho\7\63\2\2")
-        buf.write("ij\5,\27\2jk\7<\2\2kl\5\62\32\2ln\3\2\2\2mi\3\2\2\2nq")
+        buf.write("\668:<>@BDF\2\13\3\2\32\33\4\2\25\25\31\31\4\2\3\3$$\3")
+        buf.write("\2\3\t\3\2\n\17\3\2\20\23\5\2\36\36&\'NN\4\2&(NN\4\2\34")
+        buf.write("\34&(\2\u0274\2H\3\2\2\2\4h\3\2\2\2\6x\3\2\2\2\b{\3\2")
+        buf.write("\2\2\n\u00a3\3\2\2\2\f\u00ce\3\2\2\2\16\u00d0\3\2\2\2")
+        buf.write("\20\u00db\3\2\2\2\22\u00df\3\2\2\2\24\u00e3\3\2\2\2\26")
+        buf.write("\u00e7\3\2\2\2\30\u00eb\3\2\2\2\32\u0100\3\2\2\2\34\u0105")
+        buf.write("\3\2\2\2\36\u0119\3\2\2\2 \u0132\3\2\2\2\"\u014d\3\2\2")
+        buf.write("\2$\u0158\3\2\2\2&\u0162\3\2\2\2(\u0175\3\2\2\2*\u0178")
+        buf.write("\3\2\2\2,\u0187\3\2\2\2.\u0191\3\2\2\2\60\u019d\3\2\2")
+        buf.write("\2\62\u01a3\3\2\2\2\64\u01a5\3\2\2\2\66\u01ab\3\2\2\2")
+        buf.write("8\u01c2\3\2\2\2:\u01d4\3\2\2\2<\u01d7\3\2\2\2>\u01f1\3")
+        buf.write("\2\2\2@\u021b\3\2\2\2B\u021d\3\2\2\2D\u021f\3\2\2\2F\u0222")
+        buf.write("\3\2\2\2HI\7\30\2\2IM\7\34\2\2JL\t\2\2\2KJ\3\2\2\2LO\3")
+        buf.write("\2\2\2MK\3\2\2\2MN\3\2\2\2NQ\3\2\2\2OM\3\2\2\2PR\5\4\3")
+        buf.write("\2QP\3\2\2\2QR\3\2\2\2RZ\3\2\2\2SY\5\20\t\2TY\5\22\n\2")
+        buf.write("UY\5\24\13\2VY\5\26\f\2WY\5\b\5\2XS\3\2\2\2XT\3\2\2\2")
+        buf.write("XU\3\2\2\2XV\3\2\2\2XW\3\2\2\2Y\\\3\2\2\2ZX\3\2\2\2Z[")
+        buf.write("\3\2\2\2[]\3\2\2\2\\Z\3\2\2\2]a\7\26\2\2^`\5\f\7\2_^\3")
+        buf.write("\2\2\2`c\3\2\2\2a_\3\2\2\2ab\3\2\2\2bd\3\2\2\2ca\3\2\2")
+        buf.write("\2de\7\27\2\2ef\3\2\2\2fg\7\2\2\3g\3\3\2\2\2ho\7?\2\2")
+        buf.write("ij\5,\27\2jk\7H\2\2kl\5\62\32\2ln\3\2\2\2mi\3\2\2\2nq")
         buf.write("\3\2\2\2om\3\2\2\2op\3\2\2\2p\5\3\2\2\2qo\3\2\2\2rs\5")
-        buf.write(",\27\2st\7<\2\2tu\5\62\32\2uw\3\2\2\2vr\3\2\2\2wz\3\2")
-        buf.write("\2\2xv\3\2\2\2xy\3\2\2\2y\7\3\2\2\2zx\3\2\2\2{|\7A\2\2")
-        buf.write("|~\7B\2\2}\177\5\n\6\2~}\3\2\2\2~\177\3\2\2\2\177\u0080")
-        buf.write("\3\2\2\2\u0080\u0081\7<\2\2\u0081\u008b\t\3\2\2\u0082")
-        buf.write("\u008a\7\16\2\2\u0083\u008a\7\17\2\2\u0084\u008a\5\20")
+        buf.write(",\27\2st\7H\2\2tu\5\62\32\2uw\3\2\2\2vr\3\2\2\2wz\3\2")
+        buf.write("\2\2xv\3\2\2\2xy\3\2\2\2y\7\3\2\2\2zx\3\2\2\2{|\7M\2\2")
+        buf.write("|~\7N\2\2}\177\5\n\6\2~}\3\2\2\2~\177\3\2\2\2\177\u0080")
+        buf.write("\3\2\2\2\u0080\u0081\7H\2\2\u0081\u008b\t\3\2\2\u0082")
+        buf.write("\u008a\7\32\2\2\u0083\u008a\7\33\2\2\u0084\u008a\5\20")
         buf.write("\t\2\u0085\u008a\5\22\n\2\u0086\u008a\5\24\13\2\u0087")
         buf.write("\u008a\5\26\f\2\u0088\u008a\5\4\3\2\u0089\u0082\3\2\2")
         buf.write("\2\u0089\u0083\3\2\2\2\u0089\u0084\3\2\2\2\u0089\u0085")
         buf.write("\3\2\2\2\u0089\u0086\3\2\2\2\u0089\u0087\3\2\2\2\u0089")
         buf.write("\u0088\3\2\2\2\u008a\u008d\3\2\2\2\u008b\u0089\3\2\2\2")
         buf.write("\u008b\u008c\3\2\2\2\u008c\u008e\3\2\2\2\u008d\u008b\3")
-        buf.write("\2\2\2\u008e\u008f\5\6\4\2\u008f\u0093\7\n\2\2\u0090\u0092")
-        buf.write("\5\f\7\2\u0091\u0090\3\2\2\2\u0092\u0095\3\2\2\2\u0093")
-        buf.write("\u0091\3\2\2\2\u0093\u0094\3\2\2\2\u0094\u0096\3\2\2\2")
-        buf.write("\u0095\u0093\3\2\2\2\u0096\u009f\7\60\2\2\u0097\u009b")
+        buf.write("\2\2\2\u008e\u008f\5\6\4\2\u008f\u0093\7\26\2\2\u0090")
+        buf.write("\u0092\5\f\7\2\u0091\u0090\3\2\2\2\u0092\u0095\3\2\2\2")
+        buf.write("\u0093\u0091\3\2\2\2\u0093\u0094\3\2\2\2\u0094\u0096\3")
+        buf.write("\2\2\2\u0095\u0093\3\2\2\2\u0096\u009f\7<\2\2\u0097\u009b")
         buf.write("\5:\36\2\u0098\u009b\5,\27\2\u0099\u009b\5\16\b\2\u009a")
         buf.write("\u0097\3\2\2\2\u009a\u0098\3\2\2\2\u009a\u0099\3\2\2\2")
         buf.write("\u009b\u009c\3\2\2\2\u009c\u009a\3\2\2\2\u009c\u009d\3")
-        buf.write("\2\2\2\u009d\u00a0\3\2\2\2\u009e\u00a0\7\r\2\2\u009f\u009a")
-        buf.write("\3\2\2\2\u009f\u009e\3\2\2\2\u00a0\u00a1\3\2\2\2\u00a1")
-        buf.write("\u00a2\7\61\2\2\u00a2\t\3\2\2\2\u00a3\u00a5\7\26\2\2\u00a4")
-        buf.write("\u00a6\7\63\2\2\u00a5\u00a4\3\2\2\2\u00a5\u00a6\3\2\2")
-        buf.write("\2\u00a6\u00a7\3\2\2\2\u00a7\u00a8\5,\27\2\u00a8\u00a9")
-        buf.write("\7<\2\2\u00a9\u00b4\7\5\2\2\u00aa\u00ac\7\62\2\2\u00ab")
-        buf.write("\u00ad\7\63\2\2\u00ac\u00ab\3\2\2\2\u00ac\u00ad\3\2\2")
-        buf.write("\2\u00ad\u00ae\3\2\2\2\u00ae\u00af\5,\27\2\u00af\u00b0")
-        buf.write("\7<\2\2\u00b0\u00b1\7\5\2\2\u00b1\u00b3\3\2\2\2\u00b2")
+        buf.write("\2\2\2\u009d\u00a0\3\2\2\2\u009e\u00a0\7\31\2\2\u009f")
+        buf.write("\u009a\3\2\2\2\u009f\u009e\3\2\2\2\u00a0\u00a1\3\2\2\2")
+        buf.write("\u00a1\u00a2\7=\2\2\u00a2\t\3\2\2\2\u00a3\u00a5\7\"\2")
+        buf.write("\2\u00a4\u00a6\7?\2\2\u00a5\u00a4\3\2\2\2\u00a5\u00a6")
+        buf.write("\3\2\2\2\u00a6\u00a7\3\2\2\2\u00a7\u00a8\5,\27\2\u00a8")
+        buf.write("\u00a9\7H\2\2\u00a9\u00b4\7\25\2\2\u00aa\u00ac\7>\2\2")
+        buf.write("\u00ab\u00ad\7?\2\2\u00ac\u00ab\3\2\2\2\u00ac\u00ad\3")
+        buf.write("\2\2\2\u00ad\u00ae\3\2\2\2\u00ae\u00af\5,\27\2\u00af\u00b0")
+        buf.write("\7H\2\2\u00b0\u00b1\7\25\2\2\u00b1\u00b3\3\2\2\2\u00b2")
         buf.write("\u00aa\3\2\2\2\u00b3\u00b6\3\2\2\2\u00b4\u00b2\3\2\2\2")
         buf.write("\u00b4\u00b5\3\2\2\2\u00b5\u00b7\3\2\2\2\u00b6\u00b4\3")
-        buf.write("\2\2\2\u00b7\u00b8\7\27\2\2\u00b8\13\3\2\2\2\u00b9\u00cf")
+        buf.write("\2\2\2\u00b7\u00b8\7#\2\2\u00b8\13\3\2\2\2\u00b9\u00cf")
         buf.write("\5\30\r\2\u00ba\u00cf\5\32\16\2\u00bb\u00cf\5\34\17\2")
         buf.write("\u00bc\u00cf\5\36\20\2\u00bd\u00cf\5 \21\2\u00be\u00cf")
         buf.write("\5\"\22\2\u00bf\u00cf\5$\23\2\u00c0\u00cf\5(\25\2\u00c1")
-        buf.write("\u00cf\5&\24\2\u00c2\u00cf\5*\26\2\u00c3\u00cf\7/\2\2")
-        buf.write("\u00c4\u00cf\7\16\2\2\u00c5\u00cf\78\2\2\u00c6\u00cf\7")
-        buf.write("9\2\2\u00c7\u00cf\7:\2\2\u00c8\u00cf\7;\2\2\u00c9\u00cf")
+        buf.write("\u00cf\5&\24\2\u00c2\u00cf\5*\26\2\u00c3\u00cf\7;\2\2")
+        buf.write("\u00c4\u00cf\7\32\2\2\u00c5\u00cf\7D\2\2\u00c6\u00cf\7")
+        buf.write("E\2\2\u00c7\u00cf\7F\2\2\u00c8\u00cf\7G\2\2\u00c9\u00cf")
         buf.write("\5\16\b\2\u00ca\u00cf\5\20\t\2\u00cb\u00cf\5\22\n\2\u00cc")
         buf.write("\u00cf\5\26\f\2\u00cd\u00cf\5\24\13\2\u00ce\u00b9\3\2")
         buf.write("\2\2\u00ce\u00ba\3\2\2\2\u00ce\u00bb\3\2\2\2\u00ce\u00bc")
@@ -137,163 +137,162 @@ def serializedATN():
         buf.write("\2\2\2\u00ce\u00c5\3\2\2\2\u00ce\u00c6\3\2\2\2\u00ce\u00c7")
         buf.write("\3\2\2\2\u00ce\u00c8\3\2\2\2\u00ce\u00c9\3\2\2\2\u00ce")
         buf.write("\u00ca\3\2\2\2\u00ce\u00cb\3\2\2\2\u00ce\u00cc\3\2\2\2")
-        buf.write("\u00ce\u00cd\3\2\2\2\u00cf\r\3\2\2\2\u00d0\u00d1\7B\2")
-        buf.write("\2\u00d1\u00d5\7\26\2\2\u00d2\u00d6\5.\30\2\u00d3\u00d6")
+        buf.write("\u00ce\u00cd\3\2\2\2\u00cf\r\3\2\2\2\u00d0\u00d1\7N\2")
+        buf.write("\2\u00d1\u00d5\7\"\2\2\u00d2\u00d6\5.\30\2\u00d3\u00d6")
         buf.write("\5,\27\2\u00d4\u00d6\5\16\b\2\u00d5\u00d2\3\2\2\2\u00d5")
         buf.write("\u00d3\3\2\2\2\u00d5\u00d4\3\2\2\2\u00d6\u00d7\3\2\2\2")
         buf.write("\u00d7\u00d5\3\2\2\2\u00d7\u00d8\3\2\2\2\u00d8\u00d9\3")
-        buf.write("\2\2\2\u00d9\u00da\7\27\2\2\u00da\17\3\2\2\2\u00db\u00dc")
-        buf.write("\7B\2\2\u00dc\u00dd\7\31\2\2\u00dd\u00de\7\20\2\2\u00de")
-        buf.write("\21\3\2\2\2\u00df\u00e0\7B\2\2\u00e0\u00e1\7\31\2\2\u00e1")
-        buf.write("\u00e2\5:\36\2\u00e2\23\3\2\2\2\u00e3\u00e4\7B\2\2\u00e4")
-        buf.write("\u00e5\7\31\2\2\u00e5\u00e6\7\34\2\2\u00e6\25\3\2\2\2")
-        buf.write("\u00e7\u00e8\7\22\2\2\u00e8\u00e9\7\31\2\2\u00e9\u00ea")
-        buf.write("\5:\36\2\u00ea\27\3\2\2\2\u00eb\u00ec\7\36\2\2\u00ec\u00f0")
-        buf.write("\7\26\2\2\u00ed\u00f1\7\20\2\2\u00ee\u00f1\5:\36\2\u00ef")
-        buf.write("\u00f1\58\35\2\u00f0\u00ed\3\2\2\2\u00f0\u00ee\3\2\2\2")
-        buf.write("\u00f0\u00ef\3\2\2\2\u00f1\u00fb\3\2\2\2\u00f2\u00f7\t")
-        buf.write("\4\2\2\u00f3\u00f8\7\20\2\2\u00f4\u00f8\5:\36\2\u00f5")
-        buf.write("\u00f8\58\35\2\u00f6\u00f8\7B\2\2\u00f7\u00f3\3\2\2\2")
-        buf.write("\u00f7\u00f4\3\2\2\2\u00f7\u00f5\3\2\2\2\u00f7\u00f6\3")
-        buf.write("\2\2\2\u00f8\u00fa\3\2\2\2\u00f9\u00f2\3\2\2\2\u00fa\u00fd")
-        buf.write("\3\2\2\2\u00fb\u00f9\3\2\2\2\u00fb\u00fc\3\2\2\2\u00fc")
-        buf.write("\u00fe\3\2\2\2\u00fd\u00fb\3\2\2\2\u00fe\u00ff\7\27\2")
-        buf.write("\2\u00ff\31\3\2\2\2\u0100\u0101\7\37\2\2\u0101\u0102\7")
-        buf.write("\26\2\2\u0102\u0103\5,\27\2\u0103\u0104\7\27\2\2\u0104")
-        buf.write("\33\3\2\2\2\u0105\u0106\7 \2\2\u0106\u0107\5> \2\u0107")
-        buf.write("\u010b\7!\2\2\u0108\u010a\5\f\7\2\u0109\u0108\3\2\2\2")
-        buf.write("\u010a\u010d\3\2\2\2\u010b\u0109\3\2\2\2\u010b\u010c\3")
-        buf.write("\2\2\2\u010c\u0115\3\2\2\2\u010d\u010b\3\2\2\2\u010e\u0112")
-        buf.write("\7\"\2\2\u010f\u0111\5\f\7\2\u0110\u010f\3\2\2\2\u0111")
-        buf.write("\u0114\3\2\2\2\u0112\u0110\3\2\2\2\u0112\u0113\3\2\2\2")
-        buf.write("\u0113\u0116\3\2\2\2\u0114\u0112\3\2\2\2\u0115\u010e\3")
-        buf.write("\2\2\2\u0115\u0116\3\2\2\2\u0116\u0117\3\2\2\2\u0117\u0118")
-        buf.write("\7#\2\2\u0118\35\3\2\2\2\u0119\u011a\7$\2\2\u011a\u0123")
-        buf.write("\7B\2\2\u011b\u011c\7%\2\2\u011c\u0120\5D#\2\u011d\u011f")
-        buf.write("\5\f\7\2\u011e\u011d\3\2\2\2\u011f\u0122\3\2\2\2\u0120")
-        buf.write("\u011e\3\2\2\2\u0120\u0121\3\2\2\2\u0121\u0124\3\2\2\2")
-        buf.write("\u0122\u0120\3\2\2\2\u0123\u011b\3\2\2\2\u0124\u0125\3")
-        buf.write("\2\2\2\u0125\u0123\3\2\2\2\u0125\u0126\3\2\2\2\u0126\u012e")
-        buf.write("\3\2\2\2\u0127\u012b\7&\2\2\u0128\u012a\5\f\7\2\u0129")
-        buf.write("\u0128\3\2\2\2\u012a\u012d\3\2\2\2\u012b\u0129\3\2\2\2")
-        buf.write("\u012b\u012c\3\2\2\2\u012c\u012f\3\2\2\2\u012d\u012b\3")
-        buf.write("\2\2\2\u012e\u0127\3\2\2\2\u012e\u012f\3\2\2\2\u012f\u0130")
-        buf.write("\3\2\2\2\u0130\u0131\7\'\2\2\u0131\37\3\2\2\2\u0132\u0133")
-        buf.write("\7(\2\2\u0133\u0134\7B\2\2\u0134\u0136\7\23\2\2\u0135")
-        buf.write("\u0137\7\32\2\2\u0136\u0135\3\2\2\2\u0137\u0138\3\2\2")
-        buf.write("\2\u0138\u0136\3\2\2\2\u0138\u0139\3\2\2\2\u0139\u013a")
-        buf.write("\3\2\2\2\u013a\u013c\7)\2\2\u013b\u013d\7\32\2\2\u013c")
-        buf.write("\u013b\3\2\2\2\u013d\u013e\3\2\2\2\u013e\u013c\3\2\2\2")
-        buf.write("\u013e\u013f\3\2\2\2\u013f\u0142\3\2\2\2\u0140\u0141\7")
-        buf.write("?\2\2\u0141\u0143\5F$\2\u0142\u0140\3\2\2\2\u0142\u0143")
-        buf.write("\3\2\2\2\u0143\u0144\3\2\2\2\u0144\u0148\7*\2\2\u0145")
-        buf.write("\u0147\5\f\7\2\u0146\u0145\3\2\2\2\u0147\u014a\3\2\2\2")
-        buf.write("\u0148\u0146\3\2\2\2\u0148\u0149\3\2\2\2\u0149\u014b\3")
-        buf.write("\2\2\2\u014a\u0148\3\2\2\2\u014b\u014c\7+\2\2\u014c!\3")
-        buf.write("\2\2\2\u014d\u014e\7-\2\2\u014e\u014f\5> \2\u014f\u0153")
-        buf.write("\7*\2\2\u0150\u0152\5\f\7\2\u0151\u0150\3\2\2\2\u0152")
+        buf.write("\2\2\2\u00d9\u00da\7#\2\2\u00da\17\3\2\2\2\u00db\u00dc")
+        buf.write("\7N\2\2\u00dc\u00dd\7%\2\2\u00dd\u00de\7\34\2\2\u00de")
+        buf.write("\21\3\2\2\2\u00df\u00e0\7N\2\2\u00e0\u00e1\7%\2\2\u00e1")
+        buf.write("\u00e2\5:\36\2\u00e2\23\3\2\2\2\u00e3\u00e4\7N\2\2\u00e4")
+        buf.write("\u00e5\7%\2\2\u00e5\u00e6\7(\2\2\u00e6\25\3\2\2\2\u00e7")
+        buf.write("\u00e8\7\36\2\2\u00e8\u00e9\7%\2\2\u00e9\u00ea\5:\36\2")
+        buf.write("\u00ea\27\3\2\2\2\u00eb\u00ec\7*\2\2\u00ec\u00f0\7\"\2")
+        buf.write("\2\u00ed\u00f1\7\34\2\2\u00ee\u00f1\5:\36\2\u00ef\u00f1")
+        buf.write("\58\35\2\u00f0\u00ed\3\2\2\2\u00f0\u00ee\3\2\2\2\u00f0")
+        buf.write("\u00ef\3\2\2\2\u00f1\u00fb\3\2\2\2\u00f2\u00f7\t\4\2\2")
+        buf.write("\u00f3\u00f8\7\34\2\2\u00f4\u00f8\5:\36\2\u00f5\u00f8")
+        buf.write("\58\35\2\u00f6\u00f8\7N\2\2\u00f7\u00f3\3\2\2\2\u00f7")
+        buf.write("\u00f4\3\2\2\2\u00f7\u00f5\3\2\2\2\u00f7\u00f6\3\2\2\2")
+        buf.write("\u00f8\u00fa\3\2\2\2\u00f9\u00f2\3\2\2\2\u00fa\u00fd\3")
+        buf.write("\2\2\2\u00fb\u00f9\3\2\2\2\u00fb\u00fc\3\2\2\2\u00fc\u00fe")
+        buf.write("\3\2\2\2\u00fd\u00fb\3\2\2\2\u00fe\u00ff\7#\2\2\u00ff")
+        buf.write("\31\3\2\2\2\u0100\u0101\7+\2\2\u0101\u0102\7\"\2\2\u0102")
+        buf.write("\u0103\5,\27\2\u0103\u0104\7#\2\2\u0104\33\3\2\2\2\u0105")
+        buf.write("\u0106\7,\2\2\u0106\u0107\5> \2\u0107\u010b\7-\2\2\u0108")
+        buf.write("\u010a\5\f\7\2\u0109\u0108\3\2\2\2\u010a\u010d\3\2\2\2")
+        buf.write("\u010b\u0109\3\2\2\2\u010b\u010c\3\2\2\2\u010c\u0115\3")
+        buf.write("\2\2\2\u010d\u010b\3\2\2\2\u010e\u0112\7.\2\2\u010f\u0111")
+        buf.write("\5\f\7\2\u0110\u010f\3\2\2\2\u0111\u0114\3\2\2\2\u0112")
+        buf.write("\u0110\3\2\2\2\u0112\u0113\3\2\2\2\u0113\u0116\3\2\2\2")
+        buf.write("\u0114\u0112\3\2\2\2\u0115\u010e\3\2\2\2\u0115\u0116\3")
+        buf.write("\2\2\2\u0116\u0117\3\2\2\2\u0117\u0118\7/\2\2\u0118\35")
+        buf.write("\3\2\2\2\u0119\u011a\7\60\2\2\u011a\u0123\7N\2\2\u011b")
+        buf.write("\u011c\7\61\2\2\u011c\u0120\5D#\2\u011d\u011f\5\f\7\2")
+        buf.write("\u011e\u011d\3\2\2\2\u011f\u0122\3\2\2\2\u0120\u011e\3")
+        buf.write("\2\2\2\u0120\u0121\3\2\2\2\u0121\u0124\3\2\2\2\u0122\u0120")
+        buf.write("\3\2\2\2\u0123\u011b\3\2\2\2\u0124\u0125\3\2\2\2\u0125")
+        buf.write("\u0123\3\2\2\2\u0125\u0126\3\2\2\2\u0126\u012e\3\2\2\2")
+        buf.write("\u0127\u012b\7\62\2\2\u0128\u012a\5\f\7\2\u0129\u0128")
+        buf.write("\3\2\2\2\u012a\u012d\3\2\2\2\u012b\u0129\3\2\2\2\u012b")
+        buf.write("\u012c\3\2\2\2\u012c\u012f\3\2\2\2\u012d\u012b\3\2\2\2")
+        buf.write("\u012e\u0127\3\2\2\2\u012e\u012f\3\2\2\2\u012f\u0130\3")
+        buf.write("\2\2\2\u0130\u0131\7\63\2\2\u0131\37\3\2\2\2\u0132\u0133")
+        buf.write("\7\64\2\2\u0133\u0134\7N\2\2\u0134\u0136\7\37\2\2\u0135")
+        buf.write("\u0137\7&\2\2\u0136\u0135\3\2\2\2\u0137\u0138\3\2\2\2")
+        buf.write("\u0138\u0136\3\2\2\2\u0138\u0139\3\2\2\2\u0139\u013a\3")
+        buf.write("\2\2\2\u013a\u013c\7\65\2\2\u013b\u013d\7&\2\2\u013c\u013b")
+        buf.write("\3\2\2\2\u013d\u013e\3\2\2\2\u013e\u013c\3\2\2\2\u013e")
+        buf.write("\u013f\3\2\2\2\u013f\u0142\3\2\2\2\u0140\u0141\7K\2\2")
+        buf.write("\u0141\u0143\5F$\2\u0142\u0140\3\2\2\2\u0142\u0143\3\2")
+        buf.write("\2\2\u0143\u0144\3\2\2\2\u0144\u0148\7\66\2\2\u0145\u0147")
+        buf.write("\5\f\7\2\u0146\u0145\3\2\2\2\u0147\u014a\3\2\2\2\u0148")
+        buf.write("\u0146\3\2\2\2\u0148\u0149\3\2\2\2\u0149\u014b\3\2\2\2")
+        buf.write("\u014a\u0148\3\2\2\2\u014b\u014c\7\67\2\2\u014c!\3\2\2")
+        buf.write("\2\u014d\u014e\79\2\2\u014e\u014f\5> \2\u014f\u0153\7")
+        buf.write("\66\2\2\u0150\u0152\5\f\7\2\u0151\u0150\3\2\2\2\u0152")
         buf.write("\u0155\3\2\2\2\u0153\u0151\3\2\2\2\u0153\u0154\3\2\2\2")
         buf.write("\u0154\u0156\3\2\2\2\u0155\u0153\3\2\2\2\u0156\u0157\7")
-        buf.write(".\2\2\u0157#\3\2\2\2\u0158\u015c\7,\2\2\u0159\u015b\5")
+        buf.write(":\2\2\u0157#\3\2\2\2\u0158\u015c\78\2\2\u0159\u015b\5")
         buf.write("\f\7\2\u015a\u0159\3\2\2\2\u015b\u015e\3\2\2\2\u015c\u015a")
         buf.write("\3\2\2\2\u015c\u015d\3\2\2\2\u015d\u015f\3\2\2\2\u015e")
-        buf.write("\u015c\3\2\2\2\u015f\u0160\7)\2\2\u0160\u0161\5> \2\u0161")
-        buf.write("%\3\2\2\2\u0162\u0173\7=\2\2\u0163\u0164\7\24\2\2\u0164")
-        buf.write("\u0165\7\64\2\2\u0165\u0174\7\25\2\2\u0166\u0167\7\24")
-        buf.write("\2\2\u0167\u0168\7\65\2\2\u0168\u0174\7\25\2\2\u0169\u016b")
-        buf.write("\7\32\2\2\u016a\u0169\3\2\2\2\u016b\u016e\3\2\2\2\u016c")
+        buf.write("\u015c\3\2\2\2\u015f\u0160\7\65\2\2\u0160\u0161\5> \2")
+        buf.write("\u0161%\3\2\2\2\u0162\u0173\7I\2\2\u0163\u0164\7 \2\2")
+        buf.write("\u0164\u0165\7@\2\2\u0165\u0174\7!\2\2\u0166\u0167\7 ")
+        buf.write("\2\2\u0167\u0168\7A\2\2\u0168\u0174\7!\2\2\u0169\u016b")
+        buf.write("\7&\2\2\u016a\u0169\3\2\2\2\u016b\u016e\3\2\2\2\u016c")
         buf.write("\u016a\3\2\2\2\u016c\u016d\3\2\2\2\u016d\u0170\3\2\2\2")
-        buf.write("\u016e\u016c\3\2\2\2\u016f\u0171\7\30\2\2\u0170\u016f")
-        buf.write("\3\2\2\2\u0170\u0171\3\2\2\2\u0171\u0172\3\2\2\2\u0172")
-        buf.write("\u0174\7\32\2\2\u0173\u0163\3\2\2\2\u0173\u0166\3\2\2")
-        buf.write("\2\u0173\u016c\3\2\2\2\u0174\'\3\2\2\2\u0175\u0176\7\66")
-        buf.write("\2\2\u0176\u0177\7\67\2\2\u0177)\3\2\2\2\u0178\u0185\7")
-        buf.write(">\2\2\u0179\u017a\7\24\2\2\u017a\u017b\7\64\2\2\u017b")
-        buf.write("\u0186\7\25\2\2\u017c\u017d\7\24\2\2\u017d\u017e\7\65")
-        buf.write("\2\2\u017e\u0186\7\25\2\2\u017f\u0181\7\32\2\2\u0180\u017f")
-        buf.write("\3\2\2\2\u0181\u0184\3\2\2\2\u0182\u0180\3\2\2\2\u0182")
-        buf.write("\u0183\3\2\2\2\u0183\u0186\3\2\2\2\u0184\u0182\3\2\2\2")
-        buf.write("\u0185\u0179\3\2\2\2\u0185\u017c\3\2\2\2\u0185\u0182\3")
-        buf.write("\2\2\2\u0186+\3\2\2\2\u0187\u018c\7B\2\2\u0188\u0189\7")
-        buf.write("\30\2\2\u0189\u018b\7B\2\2\u018a\u0188\3\2\2\2\u018b\u018e")
-        buf.write("\3\2\2\2\u018c\u018a\3\2\2\2\u018c\u018d\3\2\2\2\u018d")
-        buf.write("-\3\2\2\2\u018e\u018c\3\2\2\2\u018f\u0192\5@!\2\u0190")
-        buf.write("\u0192\7\34\2\2\u0191\u018f\3\2\2\2\u0191\u0190\3\2\2")
-        buf.write("\2\u0192\u019a\3\2\2\2\u0193\u0196\7\30\2\2\u0194\u0197")
-        buf.write("\5@!\2\u0195\u0197\7\34\2\2\u0196\u0194\3\2\2\2\u0196")
-        buf.write("\u0195\3\2\2\2\u0197\u0199\3\2\2\2\u0198\u0193\3\2\2\2")
-        buf.write("\u0199\u019c\3\2\2\2\u019a\u0198\3\2\2\2\u019a\u019b\3")
-        buf.write("\2\2\2\u019b/\3\2\2\2\u019c\u019a\3\2\2\2\u019d\u019e")
-        buf.write("\7\24\2\2\u019e\u019f\5\66\34\2\u019f\u01a0\7\25\2\2\u01a0")
-        buf.write("\61\3\2\2\2\u01a1\u01a4\7\5\2\2\u01a2\u01a4\5\64\33\2")
-        buf.write("\u01a3\u01a1\3\2\2\2\u01a3\u01a2\3\2\2\2\u01a4\63\3\2")
-        buf.write("\2\2\u01a5\u01a6\7\21\2\2\u01a6\u01a7\5\60\31\2\u01a7")
-        buf.write("\u01a8\7\23\2\2\u01a8\u01a9\7\5\2\2\u01a9\65\3\2\2\2\u01aa")
-        buf.write("\u01ac\7\32\2\2\u01ab\u01aa\3\2\2\2\u01ac\u01ad\3\2\2")
-        buf.write("\2\u01ad\u01ab\3\2\2\2\u01ad\u01ae\3\2\2\2\u01ae\u01af")
-        buf.write("\3\2\2\2\u01af\u01b1\7\35\2\2\u01b0\u01b2\7\32\2\2\u01b1")
-        buf.write("\u01b0\3\2\2\2\u01b2\u01b3\3\2\2\2\u01b3\u01b1\3\2\2\2")
-        buf.write("\u01b3\u01b4\3\2\2\2\u01b4\u01bf\3\2\2\2\u01b5\u01b7\7")
-        buf.write("\30\2\2\u01b6\u01b8\7\32\2\2\u01b7\u01b6\3\2\2\2\u01b8")
-        buf.write("\u01b9\3\2\2\2\u01b9\u01b7\3\2\2\2\u01b9\u01ba\3\2\2\2")
-        buf.write("\u01ba\u01bb\3\2\2\2\u01bb\u01bc\7\35\2\2\u01bc\u01be")
-        buf.write("\7\32\2\2\u01bd\u01b5\3\2\2\2\u01be\u01c1\3\2\2\2\u01bf")
-        buf.write("\u01bd\3\2\2\2\u01bf\u01c0\3\2\2\2\u01c0\67\3\2\2\2\u01c1")
-        buf.write("\u01bf\3\2\2\2\u01c2\u01c3\5:\36\2\u01c3\u01c5\7<\2\2")
-        buf.write("\u01c4\u01c6\7\32\2\2\u01c5\u01c4\3\2\2\2\u01c6\u01c7")
-        buf.write("\3\2\2\2\u01c7\u01c5\3\2\2\2\u01c7\u01c8\3\2\2\2\u01c8")
-        buf.write("\u01cf\3\2\2\2\u01c9\u01cb\7<\2\2\u01ca\u01cc\7\32\2\2")
-        buf.write("\u01cb\u01ca\3\2\2\2\u01cc\u01cd\3\2\2\2\u01cd\u01cb\3")
-        buf.write("\2\2\2\u01cd\u01ce\3\2\2\2\u01ce\u01d0\3\2\2\2\u01cf\u01c9")
-        buf.write("\3\2\2\2\u01cf\u01d0\3\2\2\2\u01d09\3\2\2\2\u01d1\u01d5")
-        buf.write("\5<\37\2\u01d2\u01d5\5> \2\u01d3\u01d5\5\16\b\2\u01d4")
-        buf.write("\u01d1\3\2\2\2\u01d4\u01d2\3\2\2\2\u01d4\u01d3\3\2\2\2")
-        buf.write("\u01d5;\3\2\2\2\u01d6\u01d8\7\26\2\2\u01d7\u01d6\3\2\2")
-        buf.write("\2\u01d7\u01d8\3\2\2\2\u01d8\u01da\3\2\2\2\u01d9\u01db")
-        buf.write("\7\t\2\2\u01da\u01d9\3\2\2\2\u01da\u01db\3\2\2\2\u01db")
-        buf.write("\u01dc\3\2\2\2\u01dc\u01ea\5@!\2\u01dd\u01df\t\5\2\2\u01de")
-        buf.write("\u01e0\7\26\2\2\u01df\u01de\3\2\2\2\u01df\u01e0\3\2\2")
-        buf.write("\2\u01e0\u01e2\3\2\2\2\u01e1\u01e3\7\t\2\2\u01e2\u01e1")
-        buf.write("\3\2\2\2\u01e2\u01e3\3\2\2\2\u01e3\u01e4\3\2\2\2\u01e4")
-        buf.write("\u01e6\5@!\2\u01e5\u01e7\7\27\2\2\u01e6\u01e5\3\2\2\2")
-        buf.write("\u01e6\u01e7\3\2\2\2\u01e7\u01e9\3\2\2\2\u01e8\u01dd\3")
-        buf.write("\2\2\2\u01e9\u01ec\3\2\2\2\u01ea\u01e8\3\2\2\2\u01ea\u01eb")
-        buf.write("\3\2\2\2\u01eb\u01ee\3\2\2\2\u01ec\u01ea\3\2\2\2\u01ed")
-        buf.write("\u01ef\7\27\2\2\u01ee\u01ed\3\2\2\2\u01ee\u01ef\3\2\2")
-        buf.write("\2\u01ef=\3\2\2\2\u01f0\u01f2\7\26\2\2\u01f1\u01f0\3\2")
-        buf.write("\2\2\u01f1\u01f2\3\2\2\2\u01f2\u01f4\3\2\2\2\u01f3\u01f5")
-        buf.write("\7\t\2\2\u01f4\u01f3\3\2\2\2\u01f4\u01f5\3\2\2\2\u01f5")
-        buf.write("\u01f6\3\2\2\2\u01f6\u0216\5B\"\2\u01f7\u01f9\7\7\2\2")
-        buf.write("\u01f8\u01fa\7\26\2\2\u01f9\u01f8\3\2\2\2\u01f9\u01fa")
-        buf.write("\3\2\2\2\u01fa\u01fc\3\2\2\2\u01fb\u01fd\7\t\2\2\u01fc")
-        buf.write("\u01fb\3\2\2\2\u01fc\u01fd\3\2\2\2\u01fd\u01fe\3\2\2\2")
-        buf.write("\u01fe\u0200\5B\"\2\u01ff\u0201\7\27\2\2\u0200\u01ff\3")
-        buf.write("\2\2\2\u0200\u0201\3\2\2\2\u0201\u0213\3\2\2\2\u0202\u0203")
-        buf.write("\7\b\2\2\u0203\u020f\5B\"\2\u0204\u0206\7\7\2\2\u0205")
-        buf.write("\u0207\7\26\2\2\u0206\u0205\3\2\2\2\u0206\u0207\3\2\2")
-        buf.write("\2\u0207\u0209\3\2\2\2\u0208\u020a\7\t\2\2\u0209\u0208")
-        buf.write("\3\2\2\2\u0209\u020a\3\2\2\2\u020a\u020b\3\2\2\2\u020b")
-        buf.write("\u020d\5B\"\2\u020c\u020e\7\27\2\2\u020d\u020c\3\2\2\2")
-        buf.write("\u020d\u020e\3\2\2\2\u020e\u0210\3\2\2\2\u020f\u0204\3")
-        buf.write("\2\2\2\u020f\u0210\3\2\2\2\u0210\u0212\3\2\2\2\u0211\u0202")
-        buf.write("\3\2\2\2\u0212\u0215\3\2\2\2\u0213\u0211\3\2\2\2\u0213")
-        buf.write("\u0214\3\2\2\2\u0214\u0217\3\2\2\2\u0215\u0213\3\2\2\2")
-        buf.write("\u0216\u01f7\3\2\2\2\u0216\u0217\3\2\2\2\u0217\u0219\3")
-        buf.write("\2\2\2\u0218\u021a\7\27\2\2\u0219\u0218\3\2\2\2\u0219")
-        buf.write("\u021a\3\2\2\2\u021a?\3\2\2\2\u021b\u021c\t\6\2\2\u021c")
-        buf.write("A\3\2\2\2\u021d\u021e\t\7\2\2\u021eC\3\2\2\2\u021f\u0220")
-        buf.write("\t\b\2\2\u0220E\3\2\2\2\u0221\u0223\7\4\2\2\u0222\u0221")
-        buf.write("\3\2\2\2\u0222\u0223\3\2\2\2\u0223\u0225\3\2\2\2\u0224")
-        buf.write("\u0226\7\32\2\2\u0225\u0224\3\2\2\2\u0226\u0227\3\2\2")
-        buf.write("\2\u0227\u0225\3\2\2\2\u0227\u0228\3\2\2\2\u0228G\3\2")
-        buf.write("\2\2MMQXZaox~\u0089\u008b\u0093\u009a\u009c\u009f\u00a5")
-        buf.write("\u00ac\u00b4\u00ce\u00d5\u00d7\u00f0\u00f7\u00fb\u010b")
-        buf.write("\u0112\u0115\u0120\u0125\u012b\u012e\u0138\u013e\u0142")
-        buf.write("\u0148\u0153\u015c\u016c\u0170\u0173\u0182\u0185\u018c")
-        buf.write("\u0191\u0196\u019a\u01a3\u01ad\u01b3\u01b9\u01bf\u01c7")
-        buf.write("\u01cd\u01cf\u01d4\u01d7\u01da\u01df\u01e2\u01e6\u01ea")
-        buf.write("\u01ee\u01f1\u01f4\u01f9\u01fc\u0200\u0206\u0209\u020d")
-        buf.write("\u020f\u0213\u0216\u0219\u0222\u0227")
+        buf.write("\u016e\u016c\3\2\2\2\u016f\u0171\7$\2\2\u0170\u016f\3")
+        buf.write("\2\2\2\u0170\u0171\3\2\2\2\u0171\u0172\3\2\2\2\u0172\u0174")
+        buf.write("\7&\2\2\u0173\u0163\3\2\2\2\u0173\u0166\3\2\2\2\u0173")
+        buf.write("\u016c\3\2\2\2\u0174\'\3\2\2\2\u0175\u0176\7B\2\2\u0176")
+        buf.write("\u0177\7C\2\2\u0177)\3\2\2\2\u0178\u0185\7J\2\2\u0179")
+        buf.write("\u017a\7 \2\2\u017a\u017b\7@\2\2\u017b\u0186\7!\2\2\u017c")
+        buf.write("\u017d\7 \2\2\u017d\u017e\7A\2\2\u017e\u0186\7!\2\2\u017f")
+        buf.write("\u0181\7&\2\2\u0180\u017f\3\2\2\2\u0181\u0184\3\2\2\2")
+        buf.write("\u0182\u0180\3\2\2\2\u0182\u0183\3\2\2\2\u0183\u0186\3")
+        buf.write("\2\2\2\u0184\u0182\3\2\2\2\u0185\u0179\3\2\2\2\u0185\u017c")
+        buf.write("\3\2\2\2\u0185\u0182\3\2\2\2\u0186+\3\2\2\2\u0187\u018c")
+        buf.write("\7N\2\2\u0188\u0189\7$\2\2\u0189\u018b\7N\2\2\u018a\u0188")
+        buf.write("\3\2\2\2\u018b\u018e\3\2\2\2\u018c\u018a\3\2\2\2\u018c")
+        buf.write("\u018d\3\2\2\2\u018d-\3\2\2\2\u018e\u018c\3\2\2\2\u018f")
+        buf.write("\u0192\5@!\2\u0190\u0192\7(\2\2\u0191\u018f\3\2\2\2\u0191")
+        buf.write("\u0190\3\2\2\2\u0192\u019a\3\2\2\2\u0193\u0196\7$\2\2")
+        buf.write("\u0194\u0197\5@!\2\u0195\u0197\7(\2\2\u0196\u0194\3\2")
+        buf.write("\2\2\u0196\u0195\3\2\2\2\u0197\u0199\3\2\2\2\u0198\u0193")
+        buf.write("\3\2\2\2\u0199\u019c\3\2\2\2\u019a\u0198\3\2\2\2\u019a")
+        buf.write("\u019b\3\2\2\2\u019b/\3\2\2\2\u019c\u019a\3\2\2\2\u019d")
+        buf.write("\u019e\7 \2\2\u019e\u019f\5\66\34\2\u019f\u01a0\7!\2\2")
+        buf.write("\u01a0\61\3\2\2\2\u01a1\u01a4\7\25\2\2\u01a2\u01a4\5\64")
+        buf.write("\33\2\u01a3\u01a1\3\2\2\2\u01a3\u01a2\3\2\2\2\u01a4\63")
+        buf.write("\3\2\2\2\u01a5\u01a6\7\35\2\2\u01a6\u01a7\5\60\31\2\u01a7")
+        buf.write("\u01a8\7\37\2\2\u01a8\u01a9\7\25\2\2\u01a9\65\3\2\2\2")
+        buf.write("\u01aa\u01ac\7&\2\2\u01ab\u01aa\3\2\2\2\u01ac\u01ad\3")
+        buf.write("\2\2\2\u01ad\u01ab\3\2\2\2\u01ad\u01ae\3\2\2\2\u01ae\u01af")
+        buf.write("\3\2\2\2\u01af\u01b1\7)\2\2\u01b0\u01b2\7&\2\2\u01b1\u01b0")
+        buf.write("\3\2\2\2\u01b2\u01b3\3\2\2\2\u01b3\u01b1\3\2\2\2\u01b3")
+        buf.write("\u01b4\3\2\2\2\u01b4\u01bf\3\2\2\2\u01b5\u01b7\7$\2\2")
+        buf.write("\u01b6\u01b8\7&\2\2\u01b7\u01b6\3\2\2\2\u01b8\u01b9\3")
+        buf.write("\2\2\2\u01b9\u01b7\3\2\2\2\u01b9\u01ba\3\2\2\2\u01ba\u01bb")
+        buf.write("\3\2\2\2\u01bb\u01bc\7)\2\2\u01bc\u01be\7&\2\2\u01bd\u01b5")
+        buf.write("\3\2\2\2\u01be\u01c1\3\2\2\2\u01bf\u01bd\3\2\2\2\u01bf")
+        buf.write("\u01c0\3\2\2\2\u01c0\67\3\2\2\2\u01c1\u01bf\3\2\2\2\u01c2")
+        buf.write("\u01c3\5:\36\2\u01c3\u01c5\7H\2\2\u01c4\u01c6\7&\2\2\u01c5")
+        buf.write("\u01c4\3\2\2\2\u01c6\u01c7\3\2\2\2\u01c7\u01c5\3\2\2\2")
+        buf.write("\u01c7\u01c8\3\2\2\2\u01c8\u01cf\3\2\2\2\u01c9\u01cb\7")
+        buf.write("H\2\2\u01ca\u01cc\7&\2\2\u01cb\u01ca\3\2\2\2\u01cc\u01cd")
+        buf.write("\3\2\2\2\u01cd\u01cb\3\2\2\2\u01cd\u01ce\3\2\2\2\u01ce")
+        buf.write("\u01d0\3\2\2\2\u01cf\u01c9\3\2\2\2\u01cf\u01d0\3\2\2\2")
+        buf.write("\u01d09\3\2\2\2\u01d1\u01d5\5<\37\2\u01d2\u01d5\5> \2")
+        buf.write("\u01d3\u01d5\5\16\b\2\u01d4\u01d1\3\2\2\2\u01d4\u01d2")
+        buf.write("\3\2\2\2\u01d4\u01d3\3\2\2\2\u01d5;\3\2\2\2\u01d6\u01d8")
+        buf.write("\7\"\2\2\u01d7\u01d6\3\2\2\2\u01d7\u01d8\3\2\2\2\u01d8")
+        buf.write("\u01da\3\2\2\2\u01d9\u01db\7\24\2\2\u01da\u01d9\3\2\2")
+        buf.write("\2\u01da\u01db\3\2\2\2\u01db\u01dc\3\2\2\2\u01dc\u01ea")
+        buf.write("\5@!\2\u01dd\u01df\t\5\2\2\u01de\u01e0\7\"\2\2\u01df\u01de")
+        buf.write("\3\2\2\2\u01df\u01e0\3\2\2\2\u01e0\u01e2\3\2\2\2\u01e1")
+        buf.write("\u01e3\7\24\2\2\u01e2\u01e1\3\2\2\2\u01e2\u01e3\3\2\2")
+        buf.write("\2\u01e3\u01e4\3\2\2\2\u01e4\u01e6\5@!\2\u01e5\u01e7\7")
+        buf.write("#\2\2\u01e6\u01e5\3\2\2\2\u01e6\u01e7\3\2\2\2\u01e7\u01e9")
+        buf.write("\3\2\2\2\u01e8\u01dd\3\2\2\2\u01e9\u01ec\3\2\2\2\u01ea")
+        buf.write("\u01e8\3\2\2\2\u01ea\u01eb\3\2\2\2\u01eb\u01ee\3\2\2\2")
+        buf.write("\u01ec\u01ea\3\2\2\2\u01ed\u01ef\7#\2\2\u01ee\u01ed\3")
+        buf.write("\2\2\2\u01ee\u01ef\3\2\2\2\u01ef=\3\2\2\2\u01f0\u01f2")
+        buf.write("\7\"\2\2\u01f1\u01f0\3\2\2\2\u01f1\u01f2\3\2\2\2\u01f2")
+        buf.write("\u01f4\3\2\2\2\u01f3\u01f5\7\24\2\2\u01f4\u01f3\3\2\2")
+        buf.write("\2\u01f4\u01f5\3\2\2\2\u01f5\u01f6\3\2\2\2\u01f6\u0216")
+        buf.write("\5B\"\2\u01f7\u01f9\t\6\2\2\u01f8\u01fa\7\"\2\2\u01f9")
+        buf.write("\u01f8\3\2\2\2\u01f9\u01fa\3\2\2\2\u01fa\u01fc\3\2\2\2")
+        buf.write("\u01fb\u01fd\7\24\2\2\u01fc\u01fb\3\2\2\2\u01fc\u01fd")
+        buf.write("\3\2\2\2\u01fd\u01fe\3\2\2\2\u01fe\u0200\5B\"\2\u01ff")
+        buf.write("\u0201\7#\2\2\u0200\u01ff\3\2\2\2\u0200\u0201\3\2\2\2")
+        buf.write("\u0201\u0213\3\2\2\2\u0202\u0203\t\7\2\2\u0203\u020f\5")
+        buf.write("B\"\2\u0204\u0206\t\6\2\2\u0205\u0207\7\"\2\2\u0206\u0205")
+        buf.write("\3\2\2\2\u0206\u0207\3\2\2\2\u0207\u0209\3\2\2\2\u0208")
+        buf.write("\u020a\7\24\2\2\u0209\u0208\3\2\2\2\u0209\u020a\3\2\2")
+        buf.write("\2\u020a\u020b\3\2\2\2\u020b\u020d\5B\"\2\u020c\u020e")
+        buf.write("\7#\2\2\u020d\u020c\3\2\2\2\u020d\u020e\3\2\2\2\u020e")
+        buf.write("\u0210\3\2\2\2\u020f\u0204\3\2\2\2\u020f\u0210\3\2\2\2")
+        buf.write("\u0210\u0212\3\2\2\2\u0211\u0202\3\2\2\2\u0212\u0215\3")
+        buf.write("\2\2\2\u0213\u0211\3\2\2\2\u0213\u0214\3\2\2\2\u0214\u0217")
+        buf.write("\3\2\2\2\u0215\u0213\3\2\2\2\u0216\u01f7\3\2\2\2\u0216")
+        buf.write("\u0217\3\2\2\2\u0217\u0219\3\2\2\2\u0218\u021a\7#\2\2")
+        buf.write("\u0219\u0218\3\2\2\2\u0219\u021a\3\2\2\2\u021a?\3\2\2")
+        buf.write("\2\u021b\u021c\t\b\2\2\u021cA\3\2\2\2\u021d\u021e\t\t")
+        buf.write("\2\2\u021eC\3\2\2\2\u021f\u0220\t\n\2\2\u0220E\3\2\2\2")
+        buf.write("\u0221\u0223\7\4\2\2\u0222\u0221\3\2\2\2\u0222\u0223\3")
+        buf.write("\2\2\2\u0223\u0225\3\2\2\2\u0224\u0226\7&\2\2\u0225\u0224")
+        buf.write("\3\2\2\2\u0226\u0227\3\2\2\2\u0227\u0225\3\2\2\2\u0227")
+        buf.write("\u0228\3\2\2\2\u0228G\3\2\2\2MMQXZaox~\u0089\u008b\u0093")
+        buf.write("\u009a\u009c\u009f\u00a5\u00ac\u00b4\u00ce\u00d5\u00d7")
+        buf.write("\u00f0\u00f7\u00fb\u010b\u0112\u0115\u0120\u0125\u012b")
+        buf.write("\u012e\u0138\u013e\u0142\u0148\u0153\u015c\u016c\u0170")
+        buf.write("\u0173\u0182\u0185\u018c\u0191\u0196\u019a\u01a3\u01ad")
+        buf.write("\u01b3\u01b9\u01bf\u01c7\u01cd\u01cf\u01d4\u01d7\u01da")
+        buf.write("\u01df\u01e2\u01e6\u01ea\u01ee\u01f1\u01f4\u01f9\u01fc")
+        buf.write("\u0200\u0206\u0209\u020d\u020f\u0213\u0216\u0219\u0222")
+        buf.write("\u0227")
         return buf.getvalue()
 
 
@@ -307,24 +306,27 @@ class visualgParser ( Parser ):
 
     sharedContextCache = PredictionContextCache()
 
-    literalNames = [ "<INVALID>", "'+'", "'-'", "<INVALID>", "<INVALID>", 
-                     "<INVALID>", "<INVALID>", "<INVALID>", "'inicio'", 
-                     "'fimalgoritmo'", "'algoritmo'", "'void'", "<INVALID>", 
-                     "<INVALID>", "<INVALID>", "'vetor'", "<INVALID>", "'de'", 
-                     "'['", "']'", "'('", "')'", "','", "'<-'", "<INVALID>", 
-                     "<INVALID>", "<INVALID>", "'..'", "<INVALID>", "'leia'", 
-                     "'se'", "'entao'", "'senao'", "'fimse'", "'escolha'", 
-                     "'caso'", "'outrocaso'", "'fimescolha'", "'para'", 
-                     "'ate'", "'faca'", "'fimpara'", "'repita'", "'enquanto'", 
-                     "'fimenquanto'", "'interrompa'", "'retorne'", "'fimfuncao'", 
-                     "';'", "'var'", "'on'", "'off'", "'arquivo'", "<INVALID>", 
-                     "'pausa'", "<INVALID>", "<INVALID>", "'limpatela'", 
+    literalNames = [ "<INVALID>", "'+'", "'-'", "'*'", "'/'", "'mod'", "'^'", 
+                     "'\\'", "'>'", "'>='", "'<'", "'<='", "'='", "'<>'", 
+                     "'nao'", "'ou'", "'e'", "'xou'", "<INVALID>", "<INVALID>", 
+                     "'inicio'", "'fimalgoritmo'", "'algoritmo'", "'void'", 
+                     "<INVALID>", "<INVALID>", "<INVALID>", "'vetor'", "<INVALID>", 
+                     "'de'", "'['", "']'", "'('", "')'", "','", "'<-'", 
+                     "<INVALID>", "<INVALID>", "<INVALID>", "'..'", "<INVALID>", 
+                     "'leia'", "'se'", "'entao'", "'senao'", "'fimse'", 
+                     "'escolha'", "'caso'", "'outrocaso'", "'fimescolha'", 
+                     "'para'", "'ate'", "'faca'", "'fimpara'", "'repita'", 
+                     "'enquanto'", "'fimenquanto'", "'interrompa'", "'retorne'", 
+                     "'fimfuncao'", "';'", "'var'", "'on'", "'off'", "'arquivo'", 
+                     "<INVALID>", "'pausa'", "<INVALID>", "<INVALID>", "'limpatela'", 
                      "':'", "'aleatorio'", "'timer'", "'passo'", "'//'", 
                      "'funcao '" ]
 
-    symbolicNames = [ "<INVALID>", "<INVALID>", "<INVALID>", "TIPO_DE_DADO", 
-                      "OPERADOR_BINARIO", "OPERADOR_RELACIONAL", "OPERADOR_LOGICO", 
-                      "OPERADOR_UNARIO", "INICIO", "FIM_ALGORITMO", "ALGORITMO", 
+    symbolicNames = [ "<INVALID>", "OP_SOM", "OP_SUB", "OP_MUL", "OP_DIV", 
+                      "OP_RES", "OP_POT", "OP_DIV_INT", "OP_MAIOR", "OP_MAIOR_IGUAL", 
+                      "OP_MENOR", "OP_MENOR_IGUAL", "OP_IGUAL", "OP_DIFERENTE", 
+                      "OP_NAO", "OP_OU", "OP_E", "OP_XOU", "OPERADOR_UNARIO", 
+                      "TIPO_DE_DADO", "INICIO", "FIM_ALGORITMO", "ALGORITMO", 
                       "VOID", "COMENTARIO", "COMENTARIO_MULTILINHA", "STRING", 
                       "VETOR", "MATRIZ", "DE", "ABRE_COLCHETES", "FECHA_COLCHETES", 
                       "ABRE_PARENTESES", "FECHA_PARENTESES", "VIRGULA", 
@@ -386,72 +388,84 @@ class visualgParser ( Parser ):
                    "incremento" ]
 
     EOF = Token.EOF
-    T__0=1
-    T__1=2
-    TIPO_DE_DADO=3
-    OPERADOR_BINARIO=4
-    OPERADOR_RELACIONAL=5
-    OPERADOR_LOGICO=6
-    OPERADOR_UNARIO=7
-    INICIO=8
-    FIM_ALGORITMO=9
-    ALGORITMO=10
-    VOID=11
-    COMENTARIO=12
-    COMENTARIO_MULTILINHA=13
-    STRING=14
-    VETOR=15
-    MATRIZ=16
-    DE=17
-    ABRE_COLCHETES=18
-    FECHA_COLCHETES=19
-    ABRE_PARENTESES=20
-    FECHA_PARENTESES=21
-    VIRGULA=22
-    ATRIBUIR=23
-    INTEIRO=24
-    REAL=25
-    BOOL=26
-    PONTO_PONTO=27
-    ESCREVA=28
-    LEIA=29
-    SE=30
-    ENTAO=31
-    SENAO=32
-    FIM_SE=33
-    ESCOLHA=34
-    CASO=35
-    OUTRO_CASO=36
-    FIM_ESCOLHA=37
-    PARA=38
-    ATE=39
-    FACA=40
-    FIM_PARA=41
-    REPITA=42
-    ENQUANTO=43
-    FIM_ENQUANTO=44
-    INTERROMPA=45
-    RETORNO=46
-    FIM_FUNCAO=47
-    PONTO_VIRGULA=48
-    VAR=49
-    ON=50
-    OFF=51
-    ARQUIVO=52
-    NOME_ARQUIVO=53
-    PAUSA=54
-    ECO=55
-    CRONOMETRO=56
-    LIMPATELA=57
-    DOIS_PONTOS=58
-    ALEATORIO=59
-    TIMER=60
-    PASSO=61
-    BARRA_BARRA=62
-    DECLARACAO_FUNCAO=63
-    VARIAVEL=64
-    WS=65
-    ENTER=66
+    OP_SOM=1
+    OP_SUB=2
+    OP_MUL=3
+    OP_DIV=4
+    OP_RES=5
+    OP_POT=6
+    OP_DIV_INT=7
+    OP_MAIOR=8
+    OP_MAIOR_IGUAL=9
+    OP_MENOR=10
+    OP_MENOR_IGUAL=11
+    OP_IGUAL=12
+    OP_DIFERENTE=13
+    OP_NAO=14
+    OP_OU=15
+    OP_E=16
+    OP_XOU=17
+    OPERADOR_UNARIO=18
+    TIPO_DE_DADO=19
+    INICIO=20
+    FIM_ALGORITMO=21
+    ALGORITMO=22
+    VOID=23
+    COMENTARIO=24
+    COMENTARIO_MULTILINHA=25
+    STRING=26
+    VETOR=27
+    MATRIZ=28
+    DE=29
+    ABRE_COLCHETES=30
+    FECHA_COLCHETES=31
+    ABRE_PARENTESES=32
+    FECHA_PARENTESES=33
+    VIRGULA=34
+    ATRIBUIR=35
+    INTEIRO=36
+    REAL=37
+    BOOL=38
+    PONTO_PONTO=39
+    ESCREVA=40
+    LEIA=41
+    SE=42
+    ENTAO=43
+    SENAO=44
+    FIM_SE=45
+    ESCOLHA=46
+    CASO=47
+    OUTRO_CASO=48
+    FIM_ESCOLHA=49
+    PARA=50
+    ATE=51
+    FACA=52
+    FIM_PARA=53
+    REPITA=54
+    ENQUANTO=55
+    FIM_ENQUANTO=56
+    INTERROMPA=57
+    RETORNO=58
+    FIM_FUNCAO=59
+    PONTO_VIRGULA=60
+    VAR=61
+    ON=62
+    OFF=63
+    ARQUIVO=64
+    NOME_ARQUIVO=65
+    PAUSA=66
+    ECO=67
+    CRONOMETRO=68
+    LIMPATELA=69
+    DOIS_PONTOS=70
+    ALEATORIO=71
+    TIMER=72
+    PASSO=73
+    BARRA_BARRA=74
+    DECLARACAO_FUNCAO=75
+    VARIAVEL=76
+    WS=77
+    ENTER=78
 
     def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
         super().__init__(input, output)
@@ -593,7 +607,7 @@ class visualgParser ( Parser ):
             self.state = 88
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while ((((_la - 16)) & ~0x3f) == 0 and ((1 << (_la - 16)) & ((1 << (visualgParser.MATRIZ - 16)) | (1 << (visualgParser.DECLARACAO_FUNCAO - 16)) | (1 << (visualgParser.VARIAVEL - 16)))) != 0):
+            while ((((_la - 28)) & ~0x3f) == 0 and ((1 << (_la - 28)) & ((1 << (visualgParser.MATRIZ - 28)) | (1 << (visualgParser.DECLARACAO_FUNCAO - 28)) | (1 << (visualgParser.VARIAVEL - 28)))) != 0):
                 self.state = 86
                 self._errHandler.sync(self)
                 la_ = self._interp.adaptivePredict(self._input,2,self._ctx)
@@ -632,7 +646,7 @@ class visualgParser ( Parser ):
             self.state = 95
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while ((((_la - 12)) & ~0x3f) == 0 and ((1 << (_la - 12)) & ((1 << (visualgParser.COMENTARIO - 12)) | (1 << (visualgParser.MATRIZ - 12)) | (1 << (visualgParser.ESCREVA - 12)) | (1 << (visualgParser.LEIA - 12)) | (1 << (visualgParser.SE - 12)) | (1 << (visualgParser.ESCOLHA - 12)) | (1 << (visualgParser.PARA - 12)) | (1 << (visualgParser.REPITA - 12)) | (1 << (visualgParser.ENQUANTO - 12)) | (1 << (visualgParser.INTERROMPA - 12)) | (1 << (visualgParser.ARQUIVO - 12)) | (1 << (visualgParser.PAUSA - 12)) | (1 << (visualgParser.ECO - 12)) | (1 << (visualgParser.CRONOMETRO - 12)) | (1 << (visualgParser.LIMPATELA - 12)) | (1 << (visualgParser.ALEATORIO - 12)) | (1 << (visualgParser.TIMER - 12)) | (1 << (visualgParser.VARIAVEL - 12)))) != 0):
+            while ((((_la - 24)) & ~0x3f) == 0 and ((1 << (_la - 24)) & ((1 << (visualgParser.COMENTARIO - 24)) | (1 << (visualgParser.MATRIZ - 24)) | (1 << (visualgParser.ESCREVA - 24)) | (1 << (visualgParser.LEIA - 24)) | (1 << (visualgParser.SE - 24)) | (1 << (visualgParser.ESCOLHA - 24)) | (1 << (visualgParser.PARA - 24)) | (1 << (visualgParser.REPITA - 24)) | (1 << (visualgParser.ENQUANTO - 24)) | (1 << (visualgParser.INTERROMPA - 24)) | (1 << (visualgParser.ARQUIVO - 24)) | (1 << (visualgParser.PAUSA - 24)) | (1 << (visualgParser.ECO - 24)) | (1 << (visualgParser.CRONOMETRO - 24)) | (1 << (visualgParser.LIMPATELA - 24)) | (1 << (visualgParser.ALEATORIO - 24)) | (1 << (visualgParser.TIMER - 24)) | (1 << (visualgParser.VARIAVEL - 24)))) != 0):
                 self.state = 92
                 self.expressoes()
                 self.state = 97
@@ -1013,7 +1027,7 @@ class visualgParser ( Parser ):
             self.state = 145
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while ((((_la - 12)) & ~0x3f) == 0 and ((1 << (_la - 12)) & ((1 << (visualgParser.COMENTARIO - 12)) | (1 << (visualgParser.MATRIZ - 12)) | (1 << (visualgParser.ESCREVA - 12)) | (1 << (visualgParser.LEIA - 12)) | (1 << (visualgParser.SE - 12)) | (1 << (visualgParser.ESCOLHA - 12)) | (1 << (visualgParser.PARA - 12)) | (1 << (visualgParser.REPITA - 12)) | (1 << (visualgParser.ENQUANTO - 12)) | (1 << (visualgParser.INTERROMPA - 12)) | (1 << (visualgParser.ARQUIVO - 12)) | (1 << (visualgParser.PAUSA - 12)) | (1 << (visualgParser.ECO - 12)) | (1 << (visualgParser.CRONOMETRO - 12)) | (1 << (visualgParser.LIMPATELA - 12)) | (1 << (visualgParser.ALEATORIO - 12)) | (1 << (visualgParser.TIMER - 12)) | (1 << (visualgParser.VARIAVEL - 12)))) != 0):
+            while ((((_la - 24)) & ~0x3f) == 0 and ((1 << (_la - 24)) & ((1 << (visualgParser.COMENTARIO - 24)) | (1 << (visualgParser.MATRIZ - 24)) | (1 << (visualgParser.ESCREVA - 24)) | (1 << (visualgParser.LEIA - 24)) | (1 << (visualgParser.SE - 24)) | (1 << (visualgParser.ESCOLHA - 24)) | (1 << (visualgParser.PARA - 24)) | (1 << (visualgParser.REPITA - 24)) | (1 << (visualgParser.ENQUANTO - 24)) | (1 << (visualgParser.INTERROMPA - 24)) | (1 << (visualgParser.ARQUIVO - 24)) | (1 << (visualgParser.PAUSA - 24)) | (1 << (visualgParser.ECO - 24)) | (1 << (visualgParser.CRONOMETRO - 24)) | (1 << (visualgParser.LIMPATELA - 24)) | (1 << (visualgParser.ALEATORIO - 24)) | (1 << (visualgParser.TIMER - 24)) | (1 << (visualgParser.VARIAVEL - 24)))) != 0):
                 self.state = 142
                 self.expressoes()
                 self.state = 147
@@ -1052,7 +1066,7 @@ class visualgParser ( Parser ):
                     self.state = 154 
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if not (((((_la - 7)) & ~0x3f) == 0 and ((1 << (_la - 7)) & ((1 << (visualgParser.OPERADOR_UNARIO - 7)) | (1 << (visualgParser.MATRIZ - 7)) | (1 << (visualgParser.ABRE_PARENTESES - 7)) | (1 << (visualgParser.INTEIRO - 7)) | (1 << (visualgParser.REAL - 7)) | (1 << (visualgParser.BOOL - 7)) | (1 << (visualgParser.VARIAVEL - 7)))) != 0)):
+                    if not (((((_la - 18)) & ~0x3f) == 0 and ((1 << (_la - 18)) & ((1 << (visualgParser.OPERADOR_UNARIO - 18)) | (1 << (visualgParser.MATRIZ - 18)) | (1 << (visualgParser.ABRE_PARENTESES - 18)) | (1 << (visualgParser.INTEIRO - 18)) | (1 << (visualgParser.REAL - 18)) | (1 << (visualgParser.BOOL - 18)) | (1 << (visualgParser.VARIAVEL - 18)))) != 0)):
                         break
 
                 pass
@@ -1521,7 +1535,7 @@ class visualgParser ( Parser ):
                 self.state = 213 
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if not (((((_la - 16)) & ~0x3f) == 0 and ((1 << (_la - 16)) & ((1 << (visualgParser.MATRIZ - 16)) | (1 << (visualgParser.INTEIRO - 16)) | (1 << (visualgParser.REAL - 16)) | (1 << (visualgParser.BOOL - 16)) | (1 << (visualgParser.VARIAVEL - 16)))) != 0)):
+                if not (((((_la - 28)) & ~0x3f) == 0 and ((1 << (_la - 28)) & ((1 << (visualgParser.MATRIZ - 28)) | (1 << (visualgParser.INTEIRO - 28)) | (1 << (visualgParser.REAL - 28)) | (1 << (visualgParser.BOOL - 28)) | (1 << (visualgParser.VARIAVEL - 28)))) != 0)):
                     break
 
             self.state = 215
@@ -1783,6 +1797,12 @@ class visualgParser ( Parser ):
             else:
                 return self.getToken(visualgParser.VIRGULA, i)
 
+        def OP_SOM(self, i:int=None):
+            if i is None:
+                return self.getTokens(visualgParser.OP_SOM)
+            else:
+                return self.getToken(visualgParser.OP_SOM, i)
+
         def VARIAVEL(self, i:int=None):
             if i is None:
                 return self.getTokens(visualgParser.VARIAVEL)
@@ -1836,10 +1856,10 @@ class visualgParser ( Parser ):
             self.state = 249
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==visualgParser.T__0 or _la==visualgParser.VIRGULA:
+            while _la==visualgParser.OP_SOM or _la==visualgParser.VIRGULA:
                 self.state = 240
                 _la = self._input.LA(1)
-                if not(_la==visualgParser.T__0 or _la==visualgParser.VIRGULA):
+                if not(_la==visualgParser.OP_SOM or _la==visualgParser.VIRGULA):
                     self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
@@ -2000,7 +2020,7 @@ class visualgParser ( Parser ):
             self.state = 265
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while ((((_la - 12)) & ~0x3f) == 0 and ((1 << (_la - 12)) & ((1 << (visualgParser.COMENTARIO - 12)) | (1 << (visualgParser.MATRIZ - 12)) | (1 << (visualgParser.ESCREVA - 12)) | (1 << (visualgParser.LEIA - 12)) | (1 << (visualgParser.SE - 12)) | (1 << (visualgParser.ESCOLHA - 12)) | (1 << (visualgParser.PARA - 12)) | (1 << (visualgParser.REPITA - 12)) | (1 << (visualgParser.ENQUANTO - 12)) | (1 << (visualgParser.INTERROMPA - 12)) | (1 << (visualgParser.ARQUIVO - 12)) | (1 << (visualgParser.PAUSA - 12)) | (1 << (visualgParser.ECO - 12)) | (1 << (visualgParser.CRONOMETRO - 12)) | (1 << (visualgParser.LIMPATELA - 12)) | (1 << (visualgParser.ALEATORIO - 12)) | (1 << (visualgParser.TIMER - 12)) | (1 << (visualgParser.VARIAVEL - 12)))) != 0):
+            while ((((_la - 24)) & ~0x3f) == 0 and ((1 << (_la - 24)) & ((1 << (visualgParser.COMENTARIO - 24)) | (1 << (visualgParser.MATRIZ - 24)) | (1 << (visualgParser.ESCREVA - 24)) | (1 << (visualgParser.LEIA - 24)) | (1 << (visualgParser.SE - 24)) | (1 << (visualgParser.ESCOLHA - 24)) | (1 << (visualgParser.PARA - 24)) | (1 << (visualgParser.REPITA - 24)) | (1 << (visualgParser.ENQUANTO - 24)) | (1 << (visualgParser.INTERROMPA - 24)) | (1 << (visualgParser.ARQUIVO - 24)) | (1 << (visualgParser.PAUSA - 24)) | (1 << (visualgParser.ECO - 24)) | (1 << (visualgParser.CRONOMETRO - 24)) | (1 << (visualgParser.LIMPATELA - 24)) | (1 << (visualgParser.ALEATORIO - 24)) | (1 << (visualgParser.TIMER - 24)) | (1 << (visualgParser.VARIAVEL - 24)))) != 0):
                 self.state = 262
                 self.expressoes()
                 self.state = 267
@@ -2016,7 +2036,7 @@ class visualgParser ( Parser ):
                 self.state = 272
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                while ((((_la - 12)) & ~0x3f) == 0 and ((1 << (_la - 12)) & ((1 << (visualgParser.COMENTARIO - 12)) | (1 << (visualgParser.MATRIZ - 12)) | (1 << (visualgParser.ESCREVA - 12)) | (1 << (visualgParser.LEIA - 12)) | (1 << (visualgParser.SE - 12)) | (1 << (visualgParser.ESCOLHA - 12)) | (1 << (visualgParser.PARA - 12)) | (1 << (visualgParser.REPITA - 12)) | (1 << (visualgParser.ENQUANTO - 12)) | (1 << (visualgParser.INTERROMPA - 12)) | (1 << (visualgParser.ARQUIVO - 12)) | (1 << (visualgParser.PAUSA - 12)) | (1 << (visualgParser.ECO - 12)) | (1 << (visualgParser.CRONOMETRO - 12)) | (1 << (visualgParser.LIMPATELA - 12)) | (1 << (visualgParser.ALEATORIO - 12)) | (1 << (visualgParser.TIMER - 12)) | (1 << (visualgParser.VARIAVEL - 12)))) != 0):
+                while ((((_la - 24)) & ~0x3f) == 0 and ((1 << (_la - 24)) & ((1 << (visualgParser.COMENTARIO - 24)) | (1 << (visualgParser.MATRIZ - 24)) | (1 << (visualgParser.ESCREVA - 24)) | (1 << (visualgParser.LEIA - 24)) | (1 << (visualgParser.SE - 24)) | (1 << (visualgParser.ESCOLHA - 24)) | (1 << (visualgParser.PARA - 24)) | (1 << (visualgParser.REPITA - 24)) | (1 << (visualgParser.ENQUANTO - 24)) | (1 << (visualgParser.INTERROMPA - 24)) | (1 << (visualgParser.ARQUIVO - 24)) | (1 << (visualgParser.PAUSA - 24)) | (1 << (visualgParser.ECO - 24)) | (1 << (visualgParser.CRONOMETRO - 24)) | (1 << (visualgParser.LIMPATELA - 24)) | (1 << (visualgParser.ALEATORIO - 24)) | (1 << (visualgParser.TIMER - 24)) | (1 << (visualgParser.VARIAVEL - 24)))) != 0):
                     self.state = 269
                     self.expressoes()
                     self.state = 274
@@ -2111,7 +2131,7 @@ class visualgParser ( Parser ):
                 self.state = 286
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                while ((((_la - 12)) & ~0x3f) == 0 and ((1 << (_la - 12)) & ((1 << (visualgParser.COMENTARIO - 12)) | (1 << (visualgParser.MATRIZ - 12)) | (1 << (visualgParser.ESCREVA - 12)) | (1 << (visualgParser.LEIA - 12)) | (1 << (visualgParser.SE - 12)) | (1 << (visualgParser.ESCOLHA - 12)) | (1 << (visualgParser.PARA - 12)) | (1 << (visualgParser.REPITA - 12)) | (1 << (visualgParser.ENQUANTO - 12)) | (1 << (visualgParser.INTERROMPA - 12)) | (1 << (visualgParser.ARQUIVO - 12)) | (1 << (visualgParser.PAUSA - 12)) | (1 << (visualgParser.ECO - 12)) | (1 << (visualgParser.CRONOMETRO - 12)) | (1 << (visualgParser.LIMPATELA - 12)) | (1 << (visualgParser.ALEATORIO - 12)) | (1 << (visualgParser.TIMER - 12)) | (1 << (visualgParser.VARIAVEL - 12)))) != 0):
+                while ((((_la - 24)) & ~0x3f) == 0 and ((1 << (_la - 24)) & ((1 << (visualgParser.COMENTARIO - 24)) | (1 << (visualgParser.MATRIZ - 24)) | (1 << (visualgParser.ESCREVA - 24)) | (1 << (visualgParser.LEIA - 24)) | (1 << (visualgParser.SE - 24)) | (1 << (visualgParser.ESCOLHA - 24)) | (1 << (visualgParser.PARA - 24)) | (1 << (visualgParser.REPITA - 24)) | (1 << (visualgParser.ENQUANTO - 24)) | (1 << (visualgParser.INTERROMPA - 24)) | (1 << (visualgParser.ARQUIVO - 24)) | (1 << (visualgParser.PAUSA - 24)) | (1 << (visualgParser.ECO - 24)) | (1 << (visualgParser.CRONOMETRO - 24)) | (1 << (visualgParser.LIMPATELA - 24)) | (1 << (visualgParser.ALEATORIO - 24)) | (1 << (visualgParser.TIMER - 24)) | (1 << (visualgParser.VARIAVEL - 24)))) != 0):
                     self.state = 283
                     self.expressoes()
                     self.state = 288
@@ -2133,7 +2153,7 @@ class visualgParser ( Parser ):
                 self.state = 297
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                while ((((_la - 12)) & ~0x3f) == 0 and ((1 << (_la - 12)) & ((1 << (visualgParser.COMENTARIO - 12)) | (1 << (visualgParser.MATRIZ - 12)) | (1 << (visualgParser.ESCREVA - 12)) | (1 << (visualgParser.LEIA - 12)) | (1 << (visualgParser.SE - 12)) | (1 << (visualgParser.ESCOLHA - 12)) | (1 << (visualgParser.PARA - 12)) | (1 << (visualgParser.REPITA - 12)) | (1 << (visualgParser.ENQUANTO - 12)) | (1 << (visualgParser.INTERROMPA - 12)) | (1 << (visualgParser.ARQUIVO - 12)) | (1 << (visualgParser.PAUSA - 12)) | (1 << (visualgParser.ECO - 12)) | (1 << (visualgParser.CRONOMETRO - 12)) | (1 << (visualgParser.LIMPATELA - 12)) | (1 << (visualgParser.ALEATORIO - 12)) | (1 << (visualgParser.TIMER - 12)) | (1 << (visualgParser.VARIAVEL - 12)))) != 0):
+                while ((((_la - 24)) & ~0x3f) == 0 and ((1 << (_la - 24)) & ((1 << (visualgParser.COMENTARIO - 24)) | (1 << (visualgParser.MATRIZ - 24)) | (1 << (visualgParser.ESCREVA - 24)) | (1 << (visualgParser.LEIA - 24)) | (1 << (visualgParser.SE - 24)) | (1 << (visualgParser.ESCOLHA - 24)) | (1 << (visualgParser.PARA - 24)) | (1 << (visualgParser.REPITA - 24)) | (1 << (visualgParser.ENQUANTO - 24)) | (1 << (visualgParser.INTERROMPA - 24)) | (1 << (visualgParser.ARQUIVO - 24)) | (1 << (visualgParser.PAUSA - 24)) | (1 << (visualgParser.ECO - 24)) | (1 << (visualgParser.CRONOMETRO - 24)) | (1 << (visualgParser.LIMPATELA - 24)) | (1 << (visualgParser.ALEATORIO - 24)) | (1 << (visualgParser.TIMER - 24)) | (1 << (visualgParser.VARIAVEL - 24)))) != 0):
                     self.state = 294
                     self.expressoes()
                     self.state = 299
@@ -2266,7 +2286,7 @@ class visualgParser ( Parser ):
             self.state = 326
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while ((((_la - 12)) & ~0x3f) == 0 and ((1 << (_la - 12)) & ((1 << (visualgParser.COMENTARIO - 12)) | (1 << (visualgParser.MATRIZ - 12)) | (1 << (visualgParser.ESCREVA - 12)) | (1 << (visualgParser.LEIA - 12)) | (1 << (visualgParser.SE - 12)) | (1 << (visualgParser.ESCOLHA - 12)) | (1 << (visualgParser.PARA - 12)) | (1 << (visualgParser.REPITA - 12)) | (1 << (visualgParser.ENQUANTO - 12)) | (1 << (visualgParser.INTERROMPA - 12)) | (1 << (visualgParser.ARQUIVO - 12)) | (1 << (visualgParser.PAUSA - 12)) | (1 << (visualgParser.ECO - 12)) | (1 << (visualgParser.CRONOMETRO - 12)) | (1 << (visualgParser.LIMPATELA - 12)) | (1 << (visualgParser.ALEATORIO - 12)) | (1 << (visualgParser.TIMER - 12)) | (1 << (visualgParser.VARIAVEL - 12)))) != 0):
+            while ((((_la - 24)) & ~0x3f) == 0 and ((1 << (_la - 24)) & ((1 << (visualgParser.COMENTARIO - 24)) | (1 << (visualgParser.MATRIZ - 24)) | (1 << (visualgParser.ESCREVA - 24)) | (1 << (visualgParser.LEIA - 24)) | (1 << (visualgParser.SE - 24)) | (1 << (visualgParser.ESCOLHA - 24)) | (1 << (visualgParser.PARA - 24)) | (1 << (visualgParser.REPITA - 24)) | (1 << (visualgParser.ENQUANTO - 24)) | (1 << (visualgParser.INTERROMPA - 24)) | (1 << (visualgParser.ARQUIVO - 24)) | (1 << (visualgParser.PAUSA - 24)) | (1 << (visualgParser.ECO - 24)) | (1 << (visualgParser.CRONOMETRO - 24)) | (1 << (visualgParser.LIMPATELA - 24)) | (1 << (visualgParser.ALEATORIO - 24)) | (1 << (visualgParser.TIMER - 24)) | (1 << (visualgParser.VARIAVEL - 24)))) != 0):
                 self.state = 323
                 self.expressoes()
                 self.state = 328
@@ -2341,7 +2361,7 @@ class visualgParser ( Parser ):
             self.state = 337
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while ((((_la - 12)) & ~0x3f) == 0 and ((1 << (_la - 12)) & ((1 << (visualgParser.COMENTARIO - 12)) | (1 << (visualgParser.MATRIZ - 12)) | (1 << (visualgParser.ESCREVA - 12)) | (1 << (visualgParser.LEIA - 12)) | (1 << (visualgParser.SE - 12)) | (1 << (visualgParser.ESCOLHA - 12)) | (1 << (visualgParser.PARA - 12)) | (1 << (visualgParser.REPITA - 12)) | (1 << (visualgParser.ENQUANTO - 12)) | (1 << (visualgParser.INTERROMPA - 12)) | (1 << (visualgParser.ARQUIVO - 12)) | (1 << (visualgParser.PAUSA - 12)) | (1 << (visualgParser.ECO - 12)) | (1 << (visualgParser.CRONOMETRO - 12)) | (1 << (visualgParser.LIMPATELA - 12)) | (1 << (visualgParser.ALEATORIO - 12)) | (1 << (visualgParser.TIMER - 12)) | (1 << (visualgParser.VARIAVEL - 12)))) != 0):
+            while ((((_la - 24)) & ~0x3f) == 0 and ((1 << (_la - 24)) & ((1 << (visualgParser.COMENTARIO - 24)) | (1 << (visualgParser.MATRIZ - 24)) | (1 << (visualgParser.ESCREVA - 24)) | (1 << (visualgParser.LEIA - 24)) | (1 << (visualgParser.SE - 24)) | (1 << (visualgParser.ESCOLHA - 24)) | (1 << (visualgParser.PARA - 24)) | (1 << (visualgParser.REPITA - 24)) | (1 << (visualgParser.ENQUANTO - 24)) | (1 << (visualgParser.INTERROMPA - 24)) | (1 << (visualgParser.ARQUIVO - 24)) | (1 << (visualgParser.PAUSA - 24)) | (1 << (visualgParser.ECO - 24)) | (1 << (visualgParser.CRONOMETRO - 24)) | (1 << (visualgParser.LIMPATELA - 24)) | (1 << (visualgParser.ALEATORIO - 24)) | (1 << (visualgParser.TIMER - 24)) | (1 << (visualgParser.VARIAVEL - 24)))) != 0):
                 self.state = 334
                 self.expressoes()
                 self.state = 339
@@ -2409,7 +2429,7 @@ class visualgParser ( Parser ):
             self.state = 346
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while ((((_la - 12)) & ~0x3f) == 0 and ((1 << (_la - 12)) & ((1 << (visualgParser.COMENTARIO - 12)) | (1 << (visualgParser.MATRIZ - 12)) | (1 << (visualgParser.ESCREVA - 12)) | (1 << (visualgParser.LEIA - 12)) | (1 << (visualgParser.SE - 12)) | (1 << (visualgParser.ESCOLHA - 12)) | (1 << (visualgParser.PARA - 12)) | (1 << (visualgParser.REPITA - 12)) | (1 << (visualgParser.ENQUANTO - 12)) | (1 << (visualgParser.INTERROMPA - 12)) | (1 << (visualgParser.ARQUIVO - 12)) | (1 << (visualgParser.PAUSA - 12)) | (1 << (visualgParser.ECO - 12)) | (1 << (visualgParser.CRONOMETRO - 12)) | (1 << (visualgParser.LIMPATELA - 12)) | (1 << (visualgParser.ALEATORIO - 12)) | (1 << (visualgParser.TIMER - 12)) | (1 << (visualgParser.VARIAVEL - 12)))) != 0):
+            while ((((_la - 24)) & ~0x3f) == 0 and ((1 << (_la - 24)) & ((1 << (visualgParser.COMENTARIO - 24)) | (1 << (visualgParser.MATRIZ - 24)) | (1 << (visualgParser.ESCREVA - 24)) | (1 << (visualgParser.LEIA - 24)) | (1 << (visualgParser.SE - 24)) | (1 << (visualgParser.ESCOLHA - 24)) | (1 << (visualgParser.PARA - 24)) | (1 << (visualgParser.REPITA - 24)) | (1 << (visualgParser.ENQUANTO - 24)) | (1 << (visualgParser.INTERROMPA - 24)) | (1 << (visualgParser.ARQUIVO - 24)) | (1 << (visualgParser.PAUSA - 24)) | (1 << (visualgParser.ECO - 24)) | (1 << (visualgParser.CRONOMETRO - 24)) | (1 << (visualgParser.LIMPATELA - 24)) | (1 << (visualgParser.ALEATORIO - 24)) | (1 << (visualgParser.TIMER - 24)) | (1 << (visualgParser.VARIAVEL - 24)))) != 0):
                 self.state = 343
                 self.expressoes()
                 self.state = 348
@@ -3299,11 +3319,47 @@ class visualgParser ( Parser ):
             else:
                 return self.getToken(visualgParser.FECHA_PARENTESES, i)
 
-        def OPERADOR_BINARIO(self, i:int=None):
+        def OP_SOM(self, i:int=None):
             if i is None:
-                return self.getTokens(visualgParser.OPERADOR_BINARIO)
+                return self.getTokens(visualgParser.OP_SOM)
             else:
-                return self.getToken(visualgParser.OPERADOR_BINARIO, i)
+                return self.getToken(visualgParser.OP_SOM, i)
+
+        def OP_SUB(self, i:int=None):
+            if i is None:
+                return self.getTokens(visualgParser.OP_SUB)
+            else:
+                return self.getToken(visualgParser.OP_SUB, i)
+
+        def OP_MUL(self, i:int=None):
+            if i is None:
+                return self.getTokens(visualgParser.OP_MUL)
+            else:
+                return self.getToken(visualgParser.OP_MUL, i)
+
+        def OP_DIV(self, i:int=None):
+            if i is None:
+                return self.getTokens(visualgParser.OP_DIV)
+            else:
+                return self.getToken(visualgParser.OP_DIV, i)
+
+        def OP_RES(self, i:int=None):
+            if i is None:
+                return self.getTokens(visualgParser.OP_RES)
+            else:
+                return self.getToken(visualgParser.OP_RES, i)
+
+        def OP_POT(self, i:int=None):
+            if i is None:
+                return self.getTokens(visualgParser.OP_POT)
+            else:
+                return self.getToken(visualgParser.OP_POT, i)
+
+        def OP_DIV_INT(self, i:int=None):
+            if i is None:
+                return self.getTokens(visualgParser.OP_DIV_INT)
+            else:
+                return self.getToken(visualgParser.OP_DIV_INT, i)
 
         def getRuleIndex(self):
             return visualgParser.RULE_expressao_aritmetica
@@ -3351,7 +3407,7 @@ class visualgParser ( Parser ):
                 if _alt==1:
                     self.state = 475
                     _la = self._input.LA(1)
-                    if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << visualgParser.T__0) | (1 << visualgParser.T__1) | (1 << visualgParser.OPERADOR_BINARIO))) != 0)):
+                    if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << visualgParser.OP_SOM) | (1 << visualgParser.OP_SUB) | (1 << visualgParser.OP_MUL) | (1 << visualgParser.OP_DIV) | (1 << visualgParser.OP_RES) | (1 << visualgParser.OP_POT) | (1 << visualgParser.OP_DIV_INT))) != 0)):
                         self._errHandler.recoverInline(self)
                     else:
                         self._errHandler.reportMatch(self)
@@ -3429,23 +3485,71 @@ class visualgParser ( Parser ):
             else:
                 return self.getToken(visualgParser.OPERADOR_UNARIO, i)
 
-        def OPERADOR_RELACIONAL(self, i:int=None):
-            if i is None:
-                return self.getTokens(visualgParser.OPERADOR_RELACIONAL)
-            else:
-                return self.getToken(visualgParser.OPERADOR_RELACIONAL, i)
-
         def FECHA_PARENTESES(self, i:int=None):
             if i is None:
                 return self.getTokens(visualgParser.FECHA_PARENTESES)
             else:
                 return self.getToken(visualgParser.FECHA_PARENTESES, i)
 
-        def OPERADOR_LOGICO(self, i:int=None):
+        def OP_MAIOR(self, i:int=None):
             if i is None:
-                return self.getTokens(visualgParser.OPERADOR_LOGICO)
+                return self.getTokens(visualgParser.OP_MAIOR)
             else:
-                return self.getToken(visualgParser.OPERADOR_LOGICO, i)
+                return self.getToken(visualgParser.OP_MAIOR, i)
+
+        def OP_MAIOR_IGUAL(self, i:int=None):
+            if i is None:
+                return self.getTokens(visualgParser.OP_MAIOR_IGUAL)
+            else:
+                return self.getToken(visualgParser.OP_MAIOR_IGUAL, i)
+
+        def OP_MENOR(self, i:int=None):
+            if i is None:
+                return self.getTokens(visualgParser.OP_MENOR)
+            else:
+                return self.getToken(visualgParser.OP_MENOR, i)
+
+        def OP_MENOR_IGUAL(self, i:int=None):
+            if i is None:
+                return self.getTokens(visualgParser.OP_MENOR_IGUAL)
+            else:
+                return self.getToken(visualgParser.OP_MENOR_IGUAL, i)
+
+        def OP_IGUAL(self, i:int=None):
+            if i is None:
+                return self.getTokens(visualgParser.OP_IGUAL)
+            else:
+                return self.getToken(visualgParser.OP_IGUAL, i)
+
+        def OP_DIFERENTE(self, i:int=None):
+            if i is None:
+                return self.getTokens(visualgParser.OP_DIFERENTE)
+            else:
+                return self.getToken(visualgParser.OP_DIFERENTE, i)
+
+        def OP_NAO(self, i:int=None):
+            if i is None:
+                return self.getTokens(visualgParser.OP_NAO)
+            else:
+                return self.getToken(visualgParser.OP_NAO, i)
+
+        def OP_OU(self, i:int=None):
+            if i is None:
+                return self.getTokens(visualgParser.OP_OU)
+            else:
+                return self.getToken(visualgParser.OP_OU, i)
+
+        def OP_E(self, i:int=None):
+            if i is None:
+                return self.getTokens(visualgParser.OP_E)
+            else:
+                return self.getToken(visualgParser.OP_E, i)
+
+        def OP_XOU(self, i:int=None):
+            if i is None:
+                return self.getTokens(visualgParser.OP_XOU)
+            else:
+                return self.getToken(visualgParser.OP_XOU, i)
 
         def getRuleIndex(self):
             return visualgParser.RULE_expressao_logica
@@ -3489,9 +3593,14 @@ class visualgParser ( Parser ):
             self.state = 532
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==visualgParser.OPERADOR_RELACIONAL:
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << visualgParser.OP_MAIOR) | (1 << visualgParser.OP_MAIOR_IGUAL) | (1 << visualgParser.OP_MENOR) | (1 << visualgParser.OP_MENOR_IGUAL) | (1 << visualgParser.OP_IGUAL) | (1 << visualgParser.OP_DIFERENTE))) != 0):
                 self.state = 501
-                self.match(visualgParser.OPERADOR_RELACIONAL)
+                _la = self._input.LA(1)
+                if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << visualgParser.OP_MAIOR) | (1 << visualgParser.OP_MAIOR_IGUAL) | (1 << visualgParser.OP_MENOR) | (1 << visualgParser.OP_MENOR_IGUAL) | (1 << visualgParser.OP_IGUAL) | (1 << visualgParser.OP_DIFERENTE))) != 0)):
+                    self._errHandler.recoverInline(self)
+                else:
+                    self._errHandler.reportMatch(self)
+                    self.consume()
                 self.state = 503
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
@@ -3521,17 +3630,27 @@ class visualgParser ( Parser ):
                 self.state = 529
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                while _la==visualgParser.OPERADOR_LOGICO:
+                while (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << visualgParser.OP_NAO) | (1 << visualgParser.OP_OU) | (1 << visualgParser.OP_E) | (1 << visualgParser.OP_XOU))) != 0):
                     self.state = 512
-                    self.match(visualgParser.OPERADOR_LOGICO)
+                    _la = self._input.LA(1)
+                    if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << visualgParser.OP_NAO) | (1 << visualgParser.OP_OU) | (1 << visualgParser.OP_E) | (1 << visualgParser.OP_XOU))) != 0)):
+                        self._errHandler.recoverInline(self)
+                    else:
+                        self._errHandler.reportMatch(self)
+                        self.consume()
                     self.state = 513
                     self.selecao_logica()
                     self.state = 525
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if _la==visualgParser.OPERADOR_RELACIONAL:
+                    if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << visualgParser.OP_MAIOR) | (1 << visualgParser.OP_MAIOR_IGUAL) | (1 << visualgParser.OP_MENOR) | (1 << visualgParser.OP_MENOR_IGUAL) | (1 << visualgParser.OP_IGUAL) | (1 << visualgParser.OP_DIFERENTE))) != 0):
                         self.state = 514
-                        self.match(visualgParser.OPERADOR_RELACIONAL)
+                        _la = self._input.LA(1)
+                        if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << visualgParser.OP_MAIOR) | (1 << visualgParser.OP_MAIOR_IGUAL) | (1 << visualgParser.OP_MENOR) | (1 << visualgParser.OP_MENOR_IGUAL) | (1 << visualgParser.OP_IGUAL) | (1 << visualgParser.OP_DIFERENTE))) != 0)):
+                            self._errHandler.recoverInline(self)
+                        else:
+                            self._errHandler.reportMatch(self)
+                            self.consume()
                         self.state = 516
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
@@ -3625,7 +3744,7 @@ class visualgParser ( Parser ):
             self.enterOuterAlt(localctx, 1)
             self.state = 537
             _la = self._input.LA(1)
-            if not(((((_la - 16)) & ~0x3f) == 0 and ((1 << (_la - 16)) & ((1 << (visualgParser.MATRIZ - 16)) | (1 << (visualgParser.INTEIRO - 16)) | (1 << (visualgParser.REAL - 16)) | (1 << (visualgParser.VARIAVEL - 16)))) != 0)):
+            if not(((((_la - 28)) & ~0x3f) == 0 and ((1 << (_la - 28)) & ((1 << (visualgParser.MATRIZ - 28)) | (1 << (visualgParser.INTEIRO - 28)) | (1 << (visualgParser.REAL - 28)) | (1 << (visualgParser.VARIAVEL - 28)))) != 0)):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -3681,7 +3800,7 @@ class visualgParser ( Parser ):
             self.enterOuterAlt(localctx, 1)
             self.state = 539
             _la = self._input.LA(1)
-            if not(((((_la - 24)) & ~0x3f) == 0 and ((1 << (_la - 24)) & ((1 << (visualgParser.INTEIRO - 24)) | (1 << (visualgParser.REAL - 24)) | (1 << (visualgParser.BOOL - 24)) | (1 << (visualgParser.VARIAVEL - 24)))) != 0)):
+            if not(((((_la - 36)) & ~0x3f) == 0 and ((1 << (_la - 36)) & ((1 << (visualgParser.INTEIRO - 36)) | (1 << (visualgParser.REAL - 36)) | (1 << (visualgParser.BOOL - 36)) | (1 << (visualgParser.VARIAVEL - 36)))) != 0)):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -3758,6 +3877,9 @@ class visualgParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
+        def OP_SUB(self):
+            return self.getToken(visualgParser.OP_SUB, 0)
+
         def INTEIRO(self, i:int=None):
             if i is None:
                 return self.getTokens(visualgParser.INTEIRO)
@@ -3788,9 +3910,9 @@ class visualgParser ( Parser ):
             self.state = 544
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==visualgParser.T__1:
+            if _la==visualgParser.OP_SUB:
                 self.state = 543
-                self.match(visualgParser.T__1)
+                self.match(visualgParser.OP_SUB)
 
 
             self.state = 547 

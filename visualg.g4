@@ -55,7 +55,7 @@ constVet:
 	MATRIZ ATRIBUIR calculo;
 
 escreva: 
-	ESCREVA ABRE_PARENTESES (STRING | calculo | print_variavel) ((VIRGULA|'+') (STRING | calculo | print_variavel | VARIAVEL))* FECHA_PARENTESES;
+	ESCREVA ABRE_PARENTESES (STRING | calculo | print_variavel) ((VIRGULA|OP_SOM) (STRING | calculo | print_variavel | VARIAVEL))* FECHA_PARENTESES;
 
 leia:
 	LEIA ABRE_PARENTESES lista_de_variaveis FECHA_PARENTESES;
@@ -108,9 +108,9 @@ calculo:
 
 expressao_aritmetica:
 	ABRE_PARENTESES? 
-		OPERADOR_UNARIO? selecao_aritmetica 
+		OPERADOR_UNARIO? selecao_aritmetica
 		(
-			(OPERADOR_BINARIO|'+'|'-') 
+			(OP_SOM|OP_SUB|OP_MUL|OP_DIV|OP_RES|OP_POT|OP_DIV_INT)
 			ABRE_PARENTESES? 
 				OPERADOR_UNARIO? selecao_aritmetica 
 			FECHA_PARENTESES?
@@ -118,7 +118,26 @@ expressao_aritmetica:
 	FECHA_PARENTESES?;
 
 expressao_logica:
-	ABRE_PARENTESES? OPERADOR_UNARIO? selecao_logica (OPERADOR_RELACIONAL ABRE_PARENTESES? OPERADOR_UNARIO? selecao_logica FECHA_PARENTESES? (OPERADOR_LOGICO selecao_logica (OPERADOR_RELACIONAL ABRE_PARENTESES? OPERADOR_UNARIO? selecao_logica FECHA_PARENTESES?)?)*)? FECHA_PARENTESES?;
+	ABRE_PARENTESES? OPERADOR_UNARIO? selecao_logica 
+	(
+		(OP_MAIOR|OP_MAIOR_IGUAL|OP_MENOR|OP_MENOR_IGUAL|OP_IGUAL|OP_DIFERENTE) 
+		ABRE_PARENTESES? 
+		OPERADOR_UNARIO? 
+		selecao_logica 
+		FECHA_PARENTESES? 
+		(
+			(OP_NAO|OP_OU|OP_E|OP_XOU) 
+			selecao_logica 
+			(
+				(OP_MAIOR|OP_MAIOR_IGUAL|OP_MENOR|OP_MENOR_IGUAL|OP_IGUAL|OP_DIFERENTE) 
+				ABRE_PARENTESES? 
+				OPERADOR_UNARIO? 
+				selecao_logica 
+				FECHA_PARENTESES?
+			)
+		?)
+	*)? 
+	FECHA_PARENTESES?;
 
 selecao_aritmetica: 
 	VARIAVEL | INTEIRO | REAL | MATRIZ;
@@ -130,6 +149,33 @@ selecao_escolha:
 incremento: 
 	'-'? INTEIRO+;
 
+OP_SOM:'+';
+OP_SUB:'-';
+OP_MUL:'*';
+OP_DIV:'/';
+OP_RES:'mod';
+OP_POT:'^';
+OP_DIV_INT:'\\';
+
+// OPERADOR_BINARIO:  '-' | '*' | '/' | 'mod' | '^' | '\\';
+// OPERADOR_RELACIONAL: '>' | '<' | '<=' | '>=' | '=' | '<>';
+
+OP_MAIOR:'>';
+OP_MAIOR_IGUAL:'>=';
+OP_MENOR:'<';
+OP_MENOR_IGUAL:'<=';
+OP_IGUAL:'=';
+OP_DIFERENTE:'<>';
+
+// OPERADOR_LOGICO: 'nao' | 'ou' | 'e' | 'xou';
+
+OP_NAO:'nao';
+OP_OU:'ou';
+OP_E:'e';
+OP_XOU:'xou';
+
+OPERADOR_UNARIO: '+'| '-';
+
 // DIGIT
 fragment DIGIT: [0-9];
 
@@ -137,11 +183,6 @@ TIPO_DE_DADO: 'inteiro' | 'real' | 'caractere' | 'logico';
 
 //OPERADORES
 //ERRO COM '%', VERIFICAR COMO TRATAR "\" E "^"
-
-OPERADOR_BINARIO: '+' | '-' | '*' | '/' | 'mod' | '^' | '\\';
-OPERADOR_RELACIONAL: '>' | '<' | '<=' | '>=' | '=' | '<>';
-OPERADOR_LOGICO: 'nao' | 'ou' | 'e' | 'xou';
-OPERADOR_UNARIO: '+'| '-';
 
 //IDS
 INICIO: 'inicio';
