@@ -209,6 +209,8 @@ def main(argv):
                 tipo = "<E>"
             elif t == lexer.OP_XOU:
                 tipo = "<XOU>"
+            elif t == lexer.MATRIZ:
+                tipo = "<MATRIZ>"
             if tipo != '':
                 output.write(str((linha, tipo, token.text)) + "\n")
             else:
