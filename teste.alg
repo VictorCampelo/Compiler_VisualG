@@ -24,6 +24,14 @@ matriz[3,9] <- a/4 - 5
 nome_do_aluno <- "Jose da Silva"
 sinalizador <- FALSO
 
+funcao soma: inteiro
+    var aux: inteiro
+    inicio
+    // n, m e res são variáveis globais
+    aux <- n + m
+    retorne aux
+    fimfuncao
+
 funcao soma(x,y: inteiro): inteiro
     inicio
     retorne x + y

@@ -10,7 +10,7 @@ variaveis_locais:
 	(lista_de_variaveis DOIS_PONTOS tipo_da_variavel)*;
 
 funcoes: 
-	DECLARACAO_FUNCAO VARIAVEL parametros DOIS_PONTOS (TIPO_DE_DADO | VOID) (COMENTARIO|COMENTARIO_MULTILINHA)* variaveis_locais INICIO expressoes* RETORNO ((calculo|lista_de_variaveis|chamar_funcao)+|VOID) FIM_FUNCAO;
+	DECLARACAO_FUNCAO VARIAVEL parametros? DOIS_PONTOS (TIPO_DE_DADO | VOID) (COMENTARIO |COMENTARIO_MULTILINHA | constCaractere | constNumerico	| constBool | constVet | variaveis_globais)* variaveis_locais INICIO expressoes* RETORNO ((calculo|lista_de_variaveis|chamar_funcao)+|VOID) FIM_FUNCAO;
 
 parametros: 
 	 ABRE_PARENTESES VAR? lista_de_variaveis DOIS_PONTOS TIPO_DE_DADO (PONTO_VIRGULA VAR? lista_de_variaveis DOIS_PONTOS TIPO_DE_DADO)* FECHA_PARENTESES;

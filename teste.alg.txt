@@ -1,79 +1,87 @@
 ARQUIVO ------------------------------------
-algoritmo "Desvio condicional composto"
-// Função: Demonstrar a utilização do desvio condicional composto.
-// Autor: VICTOR CAMPELO
-// Data: 22/12/2020
-// Seção de Declarações
- 
-//VAR GLOBAIS
-var a: inteiro
-Valor1, Valor2: real
-vet: vetor [1..10] de real
-matriz: vetor [0..4,8..10] de inteiro
-nome_do_aluno: caractere
-sinalizador: logico
-
-//constantes
-a <- 3
-Valor1 <- FALSO
-Valor2 <- Valor1 + a + a
-Valor3 <- Valor1 \ 5
-Valor4 <- Valor1 mod 3
-Valor2 <- a ^ 4
-vet[1] <- vet[1] / (a * 3)
-matriz[3,9] <- a/4 - 5
-nome_do_aluno <- "Jose da Silva"
-sinalizador <- FALSO
-
-funcao soma(x,y: inteiro): inteiro
-    inicio
-    retorne x + y
-    fimfuncao
-
-funcao vazio (x,y: inteiro): void
-    inicio
-    retorne void
-    fimfuncao
-
-inicio
-// Seção de Comandos
-x <- 2.5
-y <- 6
-a <- "teste"
-l <- VERDADEIRO
-
-escreval ("x", x:4:1, y+3:4) // Escreva: x 2.5 9
-escreval (a, "ok") // Escreve: testeok (e depois pula linha)
-escreval (a, " ok") // Escreve: teste ok (e depois pula linha)
-escreval (a + " ok") // Escreve: teste ok (e depois pula linha)
-escreval ("ok" + a) // Escreve: teste ok (e depois pula linha)
-escreval ("ok" + "a") // Escreve: teste ok (e depois pula linha)
-escreva (l) // Escreve: VERDADEIRO
-
-escreva ("Informe o nome do aluno: ")
-leia (nome)
-escreva ("Informe a nota da P1: ")
-leia (nota1)
-escreva ("Informe a nota da P2: ")
-leia (nota2)
- 
-media <- (nota1 - nota2) / 2
- 
-se  media >= 7 e media <=2  entao
-    x <- soma(media, nota1)
-
-fimse
-
-vazio(5,8)
-enquanto j <= 10 faca
-
-fimenquanto
-
-
-para j de 10 ate 1 passo -1 faca
-
-fimpara
- 
+algoritmo "Desvio condicional composto"
+// Função: Demonstrar a utilização do desvio condicional composto.
+// Autor: VICTOR CAMPELO
+// Data: 22/12/2020
+// Seção de Declarações
+ 
+//VAR GLOBAIS
+var a: inteiro
+Valor1, Valor2: real
+vet: vetor [1..10] de real
+matriz: vetor [0..4,8..10] de inteiro
+nome_do_aluno: caractere
+sinalizador: logico
+
+//constantes
+a <- 3
+Valor1 <- FALSO
+Valor2 <- Valor1 + a + a
+Valor3 <- Valor1 \ 5
+Valor4 <- Valor1 mod 3
+Valor2 <- a ^ 4
+vet[1] <- vet[1] / (a * 3)
+matriz[3,9] <- a/4 - 5
+nome_do_aluno <- "Jose da Silva"
+sinalizador <- FALSO
+
+funcao soma: inteiro
+    var aux: inteiro
+    inicio
+    // n, m e res são variáveis globais
+    aux <- n + m
+    retorne aux
+    fimfuncao
+
+funcao soma(x,y: inteiro): inteiro
+    inicio
+    retorne x + y
+    fimfuncao
+
+funcao vazio (x,y: inteiro): void
+    inicio
+    retorne void
+    fimfuncao
+
+inicio
+// Seção de Comandos
+x <- 2.5
+y <- 6
+a <- "teste"
+l <- VERDADEIRO
+
+escreval ("x", x:4:1, y+3:4) // Escreva: x 2.5 9
+escreval (a, "ok") // Escreve: testeok (e depois pula linha)
+escreval (a, " ok") // Escreve: teste ok (e depois pula linha)
+escreval (a + " ok") // Escreve: teste ok (e depois pula linha)
+escreval ("ok" + a) // Escreve: teste ok (e depois pula linha)
+escreval ("ok" + "a") // Escreve: teste ok (e depois pula linha)
+escreva (l) // Escreve: VERDADEIRO
+
+escreva ("Informe o nome do aluno: ")
+leia (nome)
+escreva ("Informe a nota da P1: ")
+leia (nota1)
+escreva ("Informe a nota da P2: ")
+leia (nota2)
+ 
+media <- (nota1 - nota2) / 2
+ 
+se  media >= 7 e media <=2  entao
+    x <- soma(media, nota1)
+
+fimse
+
+vazio(5,8)
+enquanto j <= 10 faca
+
+fimenquanto
+
+
+para j de 10 ate 1 passo -1 faca
+
+fimpara
+ 
 fimalgoritmo
 --------------------------------------------
 
@@ -171,176 +179,193 @@ TOKENS -------------------------------------
 (25, '<BOOL>', 'FALSO')
 (27, '<DECLARACAO_FUNCAO>', 'funcao ')
 (27, '<VARIAVEL>', 'soma')
-(27, '<ABRE_PARENTESES>', '(')
-(27, '<VARIAVEL>', 'x')
-(27, '<VIRGULA>', ',')
-(27, '<VARIAVEL>', 'y')
 (27, '<DOIS_PONTOS>', ':')
 (27, '<TIPO_DE_DADO>', 'inteiro')
-(27, '<FECHA_PARENTESES>', ')')
-(27, '<DOIS_PONTOS>', ':')
-(27, '<TIPO_DE_DADO>', 'inteiro')
-(28, '<INICIO>', 'inicio')
-(29, '<RETORNO>', 'retorne')
-(29, '<VARIAVEL>', 'x')
-(29, '+')
-(29, '<VARIAVEL>', 'y')
-(30, '<FIM_FUNCAO>', 'fimfuncao')
-(32, '<DECLARACAO_FUNCAO>', 'funcao ')
-(32, '<VARIAVEL>', 'vazio')
-(32, '<ABRE_PARENTESES>', '(')
-(32, '<VARIAVEL>', 'x')
-(32, '<VIRGULA>', ',')
-(32, '<VARIAVEL>', 'y')
-(32, '<DOIS_PONTOS>', ':')
-(32, '<TIPO_DE_DADO>', 'inteiro')
-(32, '<FECHA_PARENTESES>', ')')
-(32, '<DOIS_PONTOS>', ':')
-(32, '<VOID>', 'void')
-(33, '<INICIO>', 'inicio')
-(34, '<RETORNO>', 'retorne')
-(34, '<VOID>', 'void')
-(35, '<FIM_FUNCAO>', 'fimfuncao')
-(37, '<INICIO>', 'inicio')
-(39, '<VARIAVEL>', 'x')
-(39, '<ATRIBUIR>', '<-')
-(39, '<REAL>', '2.5')
+(28, '<VAR>', 'var')
+(28, '<VARIAVEL>', 'aux')
+(28, '<DOIS_PONTOS>', ':')
+(28, '<TIPO_DE_DADO>', 'inteiro')
+(29, '<INICIO>', 'inicio')
+(31, '<VARIAVEL>', 'aux')
+(31, '<ATRIBUIR>', '<-')
+(31, '<VARIAVEL>', 'n')
+(31, '+')
+(31, '<VARIAVEL>', 'm')
+(32, '<RETORNO>', 'retorne')
+(32, '<VARIAVEL>', 'aux')
+(33, '<FIM_FUNCAO>', 'fimfuncao')
+(35, '<DECLARACAO_FUNCAO>', 'funcao ')
+(35, '<VARIAVEL>', 'soma')
+(35, '<ABRE_PARENTESES>', '(')
+(35, '<VARIAVEL>', 'x')
+(35, '<VIRGULA>', ',')
+(35, '<VARIAVEL>', 'y')
+(35, '<DOIS_PONTOS>', ':')
+(35, '<TIPO_DE_DADO>', 'inteiro')
+(35, '<FECHA_PARENTESES>', ')')
+(35, '<DOIS_PONTOS>', ':')
+(35, '<TIPO_DE_DADO>', 'inteiro')
+(36, '<INICIO>', 'inicio')
+(37, '<RETORNO>', 'retorne')
+(37, '<VARIAVEL>', 'x')
+(37, '+')
+(37, '<VARIAVEL>', 'y')
+(38, '<FIM_FUNCAO>', 'fimfuncao')
+(40, '<DECLARACAO_FUNCAO>', 'funcao ')
+(40, '<VARIAVEL>', 'vazio')
+(40, '<ABRE_PARENTESES>', '(')
+(40, '<VARIAVEL>', 'x')
+(40, '<VIRGULA>', ',')
 (40, '<VARIAVEL>', 'y')
-(40, '<ATRIBUIR>', '<-')
-(40, '<INTEIRO>', '6')
-(41, '<VARIAVEL>', 'a')
-(41, '<ATRIBUIR>', '<-')
-(41, '<STRING>', '"teste"')
-(42, '<VARIAVEL>', 'l')
-(42, '<ATRIBUIR>', '<-')
-(42, '<BOOL>', 'VERDADEIRO')
-(44, '<ESCREVA>', 'escreval')
-(44, '<ABRE_PARENTESES>', '(')
-(44, '<STRING>', '"x"')
-(44, '<VIRGULA>', ',')
-(44, '<VARIAVEL>', 'x')
-(44, '<DOIS_PONTOS>', ':')
-(44, '<INTEIRO>', '4')
-(44, '<DOIS_PONTOS>', ':')
-(44, '<INTEIRO>', '1')
-(44, '<VIRGULA>', ',')
-(44, '<VARIAVEL>', 'y')
-(44, '+')
-(44, '<INTEIRO>', '3')
-(44, '<DOIS_PONTOS>', ':')
-(44, '<INTEIRO>', '4')
-(44, '<FECHA_PARENTESES>', ')')
-(45, '<ESCREVA>', 'escreval')
-(45, '<ABRE_PARENTESES>', '(')
-(45, '<VARIAVEL>', 'a')
-(45, '<VIRGULA>', ',')
-(45, '<STRING>', '"ok"')
-(45, '<FECHA_PARENTESES>', ')')
-(46, '<ESCREVA>', 'escreval')
-(46, '<ABRE_PARENTESES>', '(')
-(46, '<VARIAVEL>', 'a')
-(46, '<VIRGULA>', ',')
-(46, '<STRING>', '" ok"')
-(46, '<FECHA_PARENTESES>', ')')
-(47, '<ESCREVA>', 'escreval')
-(47, '<ABRE_PARENTESES>', '(')
-(47, '<VARIAVEL>', 'a')
-(47, '+')
-(47, '<STRING>', '" ok"')
-(47, '<FECHA_PARENTESES>', ')')
-(48, '<ESCREVA>', 'escreval')
-(48, '<ABRE_PARENTESES>', '(')
-(48, '<STRING>', '"ok"')
-(48, '+')
-(48, '<VARIAVEL>', 'a')
-(48, '<FECHA_PARENTESES>', ')')
-(49, '<ESCREVA>', 'escreval')
-(49, '<ABRE_PARENTESES>', '(')
-(49, '<STRING>', '"ok"')
-(49, '+')
-(49, '<STRING>', '"a"')
-(49, '<FECHA_PARENTESES>', ')')
-(50, '<ESCREVA>', 'escreva')
-(50, '<ABRE_PARENTESES>', '(')
+(40, '<DOIS_PONTOS>', ':')
+(40, '<TIPO_DE_DADO>', 'inteiro')
+(40, '<FECHA_PARENTESES>', ')')
+(40, '<DOIS_PONTOS>', ':')
+(40, '<VOID>', 'void')
+(41, '<INICIO>', 'inicio')
+(42, '<RETORNO>', 'retorne')
+(42, '<VOID>', 'void')
+(43, '<FIM_FUNCAO>', 'fimfuncao')
+(45, '<INICIO>', 'inicio')
+(47, '<VARIAVEL>', 'x')
+(47, '<ATRIBUIR>', '<-')
+(47, '<REAL>', '2.5')
+(48, '<VARIAVEL>', 'y')
+(48, '<ATRIBUIR>', '<-')
+(48, '<INTEIRO>', '6')
+(49, '<VARIAVEL>', 'a')
+(49, '<ATRIBUIR>', '<-')
+(49, '<STRING>', '"teste"')
 (50, '<VARIAVEL>', 'l')
-(50, '<FECHA_PARENTESES>', ')')
-(52, '<ESCREVA>', 'escreva')
+(50, '<ATRIBUIR>', '<-')
+(50, '<BOOL>', 'VERDADEIRO')
+(52, '<ESCREVA>', 'escreval')
 (52, '<ABRE_PARENTESES>', '(')
-(52, '<STRING>', '"Informe o nome do aluno: "')
+(52, '<STRING>', '"x"')
+(52, '<VIRGULA>', ',')
+(52, '<VARIAVEL>', 'x')
+(52, '<DOIS_PONTOS>', ':')
+(52, '<INTEIRO>', '4')
+(52, '<DOIS_PONTOS>', ':')
+(52, '<INTEIRO>', '1')
+(52, '<VIRGULA>', ',')
+(52, '<VARIAVEL>', 'y')
+(52, '+')
+(52, '<INTEIRO>', '3')
+(52, '<DOIS_PONTOS>', ':')
+(52, '<INTEIRO>', '4')
 (52, '<FECHA_PARENTESES>', ')')
-(53, '<LEIA>', 'leia')
+(53, '<ESCREVA>', 'escreval')
 (53, '<ABRE_PARENTESES>', '(')
-(53, '<VARIAVEL>', 'nome')
+(53, '<VARIAVEL>', 'a')
+(53, '<VIRGULA>', ',')
+(53, '<STRING>', '"ok"')
 (53, '<FECHA_PARENTESES>', ')')
-(54, '<ESCREVA>', 'escreva')
+(54, '<ESCREVA>', 'escreval')
 (54, '<ABRE_PARENTESES>', '(')
-(54, '<STRING>', '"Informe a nota da P1: "')
+(54, '<VARIAVEL>', 'a')
+(54, '<VIRGULA>', ',')
+(54, '<STRING>', '" ok"')
 (54, '<FECHA_PARENTESES>', ')')
-(55, '<LEIA>', 'leia')
+(55, '<ESCREVA>', 'escreval')
 (55, '<ABRE_PARENTESES>', '(')
-(55, '<VARIAVEL>', 'nota1')
+(55, '<VARIAVEL>', 'a')
+(55, '+')
+(55, '<STRING>', '" ok"')
 (55, '<FECHA_PARENTESES>', ')')
-(56, '<ESCREVA>', 'escreva')
+(56, '<ESCREVA>', 'escreval')
 (56, '<ABRE_PARENTESES>', '(')
-(56, '<STRING>', '"Informe a nota da P2: "')
+(56, '<STRING>', '"ok"')
+(56, '+')
+(56, '<VARIAVEL>', 'a')
 (56, '<FECHA_PARENTESES>', ')')
-(57, '<LEIA>', 'leia')
+(57, '<ESCREVA>', 'escreval')
 (57, '<ABRE_PARENTESES>', '(')
-(57, '<VARIAVEL>', 'nota2')
+(57, '<STRING>', '"ok"')
+(57, '+')
+(57, '<STRING>', '"a"')
 (57, '<FECHA_PARENTESES>', ')')
-(59, '<VARIAVEL>', 'media')
-(59, '<ATRIBUIR>', '<-')
-(59, '<ABRE_PARENTESES>', '(')
-(59, '<VARIAVEL>', 'nota1')
-(59, '-')
-(59, '<VARIAVEL>', 'nota2')
-(59, '<FECHA_PARENTESES>', ')')
-(59, '<OPERADOR_BINARIO>', '/')
-(59, '<INTEIRO>', '2')
-(61, '<SE>', 'se')
-(61, '<VARIAVEL>', 'media')
-(61, '<OPERADOR_RELACIONAL>', '>=')
-(61, '<INTEIRO>', '7')
-(61, '<OPERADOR_LOGICO>', 'e')
-(61, '<VARIAVEL>', 'media')
-(61, '<OPERADOR_RELACIONAL>', '<=')
-(61, '<INTEIRO>', '2')
-(61, '<ENTAO>', 'entao')
-(62, '<VARIAVEL>', 'x')
-(62, '<ATRIBUIR>', '<-')
-(62, '<VARIAVEL>', 'soma')
+(58, '<ESCREVA>', 'escreva')
+(58, '<ABRE_PARENTESES>', '(')
+(58, '<VARIAVEL>', 'l')
+(58, '<FECHA_PARENTESES>', ')')
+(60, '<ESCREVA>', 'escreva')
+(60, '<ABRE_PARENTESES>', '(')
+(60, '<STRING>', '"Informe o nome do aluno: "')
+(60, '<FECHA_PARENTESES>', ')')
+(61, '<LEIA>', 'leia')
+(61, '<ABRE_PARENTESES>', '(')
+(61, '<VARIAVEL>', 'nome')
+(61, '<FECHA_PARENTESES>', ')')
+(62, '<ESCREVA>', 'escreva')
 (62, '<ABRE_PARENTESES>', '(')
-(62, '<VARIAVEL>', 'media')
-(62, '<VIRGULA>', ',')
-(62, '<VARIAVEL>', 'nota1')
+(62, '<STRING>', '"Informe a nota da P1: "')
 (62, '<FECHA_PARENTESES>', ')')
-(64, '<FIM_SE>', 'fimse')
-(66, '<VARIAVEL>', 'vazio')
-(66, '<ABRE_PARENTESES>', '(')
-(66, '<INTEIRO>', '5')
-(66, '<VIRGULA>', ',')
-(66, '<INTEIRO>', '8')
-(66, '<FECHA_PARENTESES>', ')')
-(67, '<ENQUANTO>', 'enquanto')
-(67, '<VARIAVEL>', 'j')
-(67, '<OPERADOR_RELACIONAL>', '<=')
-(67, '<INTEIRO>', '10')
-(67, '<FACA>', 'faca')
-(69, '<FIM_ENQUANTO>', 'fimenquanto')
-(72, '<PARA>', 'para')
-(72, '<VARIAVEL>', 'j')
-(72, '<DE>', 'de')
-(72, '<INTEIRO>', '10')
-(72, '<ATE>', 'ate')
-(72, '<INTEIRO>', '1')
-(72, '<PASSO>', 'passo')
-(72, '<INTEIRO>', '-1')
-(72, '<FACA>', 'faca')
-(74, '<FIM_PARA>', 'fimpara')
-(76, '<FIM_ALGORITMO>', 'fimalgoritmo')
+(63, '<LEIA>', 'leia')
+(63, '<ABRE_PARENTESES>', '(')
+(63, '<VARIAVEL>', 'nota1')
+(63, '<FECHA_PARENTESES>', ')')
+(64, '<ESCREVA>', 'escreva')
+(64, '<ABRE_PARENTESES>', '(')
+(64, '<STRING>', '"Informe a nota da P2: "')
+(64, '<FECHA_PARENTESES>', ')')
+(65, '<LEIA>', 'leia')
+(65, '<ABRE_PARENTESES>', '(')
+(65, '<VARIAVEL>', 'nota2')
+(65, '<FECHA_PARENTESES>', ')')
+(67, '<VARIAVEL>', 'media')
+(67, '<ATRIBUIR>', '<-')
+(67, '<ABRE_PARENTESES>', '(')
+(67, '<VARIAVEL>', 'nota1')
+(67, '-')
+(67, '<VARIAVEL>', 'nota2')
+(67, '<FECHA_PARENTESES>', ')')
+(67, '<OPERADOR_BINARIO>', '/')
+(67, '<INTEIRO>', '2')
+(69, '<SE>', 'se')
+(69, '<VARIAVEL>', 'media')
+(69, '<OPERADOR_RELACIONAL>', '>=')
+(69, '<INTEIRO>', '7')
+(69, '<OPERADOR_LOGICO>', 'e')
+(69, '<VARIAVEL>', 'media')
+(69, '<OPERADOR_RELACIONAL>', '<=')
+(69, '<INTEIRO>', '2')
+(69, '<ENTAO>', 'entao')
+(70, '<VARIAVEL>', 'x')
+(70, '<ATRIBUIR>', '<-')
+(70, '<VARIAVEL>', 'soma')
+(70, '<ABRE_PARENTESES>', '(')
+(70, '<VARIAVEL>', 'media')
+(70, '<VIRGULA>', ',')
+(70, '<VARIAVEL>', 'nota1')
+(70, '<FECHA_PARENTESES>', ')')
+(72, '<FIM_SE>', 'fimse')
+(74, '<VARIAVEL>', 'vazio')
+(74, '<ABRE_PARENTESES>', '(')
+(74, '<INTEIRO>', '5')
+(74, '<VIRGULA>', ',')
+(74, '<INTEIRO>', '8')
+(74, '<FECHA_PARENTESES>', ')')
+(75, '<ENQUANTO>', 'enquanto')
+(75, '<VARIAVEL>', 'j')
+(75, '<OPERADOR_RELACIONAL>', '<=')
+(75, '<INTEIRO>', '10')
+(75, '<FACA>', 'faca')
+(77, '<FIM_ENQUANTO>', 'fimenquanto')
+(80, '<PARA>', 'para')
+(80, '<VARIAVEL>', 'j')
+(80, '<DE>', 'de')
+(80, '<INTEIRO>', '10')
+(80, '<ATE>', 'ate')
+(80, '<INTEIRO>', '1')
+(80, '<PASSO>', 'passo')
+(80, '<INTEIRO>', '-1')
+(80, '<FACA>', 'faca')
+(82, '<FIM_PARA>', 'fimpara')
+(84, '<FIM_ALGORITMO>', 'fimalgoritmo')
 --------------------------------------------
 
 ARVORE SINTÁTICA -----------
-(prog algoritmo "Desvio condicional composto" (variaveis_globais var (lista_de_variaveis a) : (tipo_da_variavel inteiro) (lista_de_variaveis Valor1 , Valor2) : (tipo_da_variavel real) (lista_de_variaveis vet) : (tipo_da_variavel (tipo_vetor vetor (lista_de_intervalo [ (intervalo 1 .. 10) ]) de real)) (lista_de_variaveis matriz) : (tipo_da_variavel (tipo_vetor vetor (lista_de_intervalo [ (intervalo 0 .. 4 , 8 .. 10) ]) de inteiro)) (lista_de_variaveis nome_do_aluno) : (tipo_da_variavel caractere) (lista_de_variaveis sinalizador) : (tipo_da_variavel logico)) (constNumerico a <- (calculo (expressao_aritmetica (selecao_aritmetica 3)))) (constNumerico Valor1 <- (calculo (expressao_logica (selecao_logica FALSO)))) (constNumerico Valor2 <- (calculo (expressao_aritmetica (selecao_aritmetica Valor1) + (selecao_aritmetica a) + (selecao_aritmetica a)))) (constNumerico Valor3 <- (calculo (expressao_aritmetica (selecao_aritmetica Valor1) \ (selecao_aritmetica 5)))) (constNumerico Valor4 <- (calculo (expressao_aritmetica (selecao_aritmetica Valor1) mod (selecao_aritmetica 3)))) (constNumerico Valor2 <- (calculo (expressao_aritmetica (selecao_aritmetica a) ^ (selecao_aritmetica 4)))) (constVet vet[1] <- (calculo (expressao_aritmetica (selecao_aritmetica vet[1]) / ( (selecao_aritmetica a) * (selecao_aritmetica 3) )))) (constVet matriz[3,9] <- (calculo (expressao_aritmetica (selecao_aritmetica a) / (selecao_aritmetica 4) - (selecao_aritmetica 5)))) (constCaractere nome_do_aluno <- "Jose da Silva") (constNumerico sinalizador <- (calculo (expressao_logica (selecao_logica FALSO)))) (funcoes funcao  soma (parametros ( (lista_de_variaveis x , y) : inteiro )) : inteiro variaveis_locais inicio retorne (calculo (expressao_aritmetica (selecao_aritmetica x) + (selecao_aritmetica y))) fimfuncao) (funcoes funcao  vazio (parametros ( (lista_de_variaveis x , y) : inteiro )) : void variaveis_locais inicio retorne void fimfuncao) inicio (expressoes (constNumerico x <- (calculo (expressao_aritmetica (selecao_aritmetica 2.5))))) (expressoes (constNumerico y <- (calculo (expressao_aritmetica (selecao_aritmetica 6))))) (expressoes (constCaractere a <- "teste")) (expressoes (constNumerico l <- (calculo (expressao_logica (selecao_logica VERDADEIRO))))) (expressoes (escreva escreval ( "x" , (print_variavel (calculo (expressao_aritmetica (selecao_aritmetica x))) : 4 : 1) , (calculo (expressao_aritmetica (selecao_aritmetica y))) + (print_variavel (calculo (expressao_aritmetica (selecao_aritmetica 3))) : 4) ))) (expressoes (escreva escreval ( (calculo (expressao_aritmetica (selecao_aritmetica a))) , "ok" ))) (expressoes (escreva escreval ( (calculo (expressao_aritmetica (selecao_aritmetica a))) , " ok" ))) (expressoes (escreva escreval ( (calculo (expressao_aritmetica (selecao_aritmetica a))) + " ok" ))) (expressoes (escreva escreval ( "ok" + (calculo (expressao_aritmetica (selecao_aritmetica a))) ))) (expressoes (escreva escreval ( "ok" + "a" ))) (expressoes (escreva escreva ( (calculo (expressao_aritmetica (selecao_aritmetica l))) ))) (expressoes (escreva escreva ( "Informe o nome do aluno: " ))) (expressoes (leia leia ( (lista_de_variaveis nome) ))) (expressoes (escreva escreva ( "Informe a nota da P1: " ))) (expressoes (leia leia ( (lista_de_variaveis nota1) ))) (expressoes (escreva escreva ( "Informe a nota da P2: " ))) (expressoes (leia leia ( (lista_de_variaveis nota2) ))) (expressoes (constNumerico media <- (calculo (expressao_aritmetica ( (selecao_aritmetica nota1) - (selecao_aritmetica nota2) ) / (selecao_aritmetica 2))))) (expressoes (desvio_condicional se (expressao_logica (selecao_logica media) >= (selecao_logica 7) e (selecao_logica media) <= (selecao_logica 2)) entao (expressoes (constNumerico x <- (calculo (chamar_funcao soma ( (lista_numeros (selecao_aritmetica media) , (selecao_aritmetica nota1)) ))))) fimse)) (expressoes (chamar_funcao vazio ( (lista_numeros (selecao_aritmetica 5) , (selecao_aritmetica 8)) ))) (expressoes (enquanto_faca enquanto (expressao_logica (selecao_logica j) <= (selecao_logica 10)) faca fimenquanto)) (expressoes (para_faca para j de 10 ate 1 passo (incremento -1) faca fimpara)) fimalgoritmo <EOF>)
+(prog algoritmo "Desvio condicional composto" (variaveis_globais var (lista_de_variaveis a) : (tipo_da_variavel inteiro) (lista_de_variaveis Valor1 , Valor2) : (tipo_da_variavel real) (lista_de_variaveis vet) : (tipo_da_variavel (tipo_vetor vetor (lista_de_intervalo [ (intervalo 1 .. 10) ]) de real)) (lista_de_variaveis matriz) : (tipo_da_variavel (tipo_vetor vetor (lista_de_intervalo [ (intervalo 0 .. 4 , 8 .. 10) ]) de inteiro)) (lista_de_variaveis nome_do_aluno) : (tipo_da_variavel caractere) (lista_de_variaveis sinalizador) : (tipo_da_variavel logico)) (constNumerico a <- (calculo (expressao_aritmetica (selecao_aritmetica 3)))) (constNumerico Valor1 <- (calculo (expressao_logica (selecao_logica FALSO)))) (constNumerico Valor2 <- (calculo (expressao_aritmetica (selecao_aritmetica Valor1) + (selecao_aritmetica a) + (selecao_aritmetica a)))) (constNumerico Valor3 <- (calculo (expressao_aritmetica (selecao_aritmetica Valor1) \ (selecao_aritmetica 5)))) (constNumerico Valor4 <- (calculo (expressao_aritmetica (selecao_aritmetica Valor1) mod (selecao_aritmetica 3)))) (constNumerico Valor2 <- (calculo (expressao_aritmetica (selecao_aritmetica a) ^ (selecao_aritmetica 4)))) (constVet vet[1] <- (calculo (expressao_aritmetica (selecao_aritmetica vet[1]) / ( (selecao_aritmetica a) * (selecao_aritmetica 3) )))) (constVet matriz[3,9] <- (calculo (expressao_aritmetica (selecao_aritmetica a) / (selecao_aritmetica 4) - (selecao_aritmetica 5)))) (constCaractere nome_do_aluno <- "Jose da Silva") (constNumerico sinalizador <- (calculo (expressao_logica (selecao_logica FALSO)))) (funcoes funcao  soma : inteiro (variaveis_globais var (lista_de_variaveis aux) : (tipo_da_variavel inteiro)) variaveis_locais inicio (expressoes (constNumerico aux <- (calculo (expressao_aritmetica (selecao_aritmetica n) + (selecao_aritmetica m))))) retorne (calculo (expressao_aritmetica (selecao_aritmetica aux))) fimfuncao) (funcoes funcao  soma (parametros ( (lista_de_variaveis x , y) : inteiro )) : inteiro variaveis_locais inicio retorne (calculo (expressao_aritmetica (selecao_aritmetica x) + (selecao_aritmetica y))) fimfuncao) (funcoes funcao  vazio (parametros ( (lista_de_variaveis x , y) : inteiro )) : void variaveis_locais inicio retorne void fimfuncao) inicio (expressoes (constNumerico x <- (calculo (expressao_aritmetica (selecao_aritmetica 2.5))))) (expressoes (constNumerico y <- (calculo (expressao_aritmetica (selecao_aritmetica 6))))) (expressoes (constCaractere a <- "teste")) (expressoes (constNumerico l <- (calculo (expressao_logica (selecao_logica VERDADEIRO))))) (expressoes (escreva escreval ( "x" , (print_variavel (calculo (expressao_aritmetica (selecao_aritmetica x))) : 4 : 1) , (calculo (expressao_aritmetica (selecao_aritmetica y))) + (print_variavel (calculo (expressao_aritmetica (selecao_aritmetica 3))) : 4) ))) (expressoes (escreva escreval ( (calculo (expressao_aritmetica (selecao_aritmetica a))) , "ok" ))) (expressoes (escreva escreval ( (calculo (expressao_aritmetica (selecao_aritmetica a))) , " ok" ))) (expressoes (escreva escreval ( (calculo (expressao_aritmetica (selecao_aritmetica a))) + " ok" ))) (expressoes (escreva escreval ( "ok" + (calculo (expressao_aritmetica (selecao_aritmetica a))) ))) (expressoes (escreva escreval ( "ok" + "a" ))) (expressoes (escreva escreva ( (calculo (expressao_aritmetica (selecao_aritmetica l))) ))) (expressoes (escreva escreva ( "Informe o nome do aluno: " ))) (expressoes (leia leia ( (lista_de_variaveis nome) ))) (expressoes (escreva escreva ( "Informe a nota da P1: " ))) (expressoes (leia leia ( (lista_de_variaveis nota1) ))) (expressoes (escreva escreva ( "Informe a nota da P2: " ))) (expressoes (leia leia ( (lista_de_variaveis nota2) ))) (expressoes (constNumerico media <- (calculo (expressao_aritmetica ( (selecao_aritmetica nota1) - (selecao_aritmetica nota2) ) / (selecao_aritmetica 2))))) (expressoes (desvio_condicional se (expressao_logica (selecao_logica media) >= (selecao_logica 7) e (selecao_logica media) <= (selecao_logica 2)) entao (expressoes (constNumerico x <- (calculo (chamar_funcao soma ( (lista_numeros (selecao_aritmetica media) , (selecao_aritmetica nota1)) ))))) fimse)) (expressoes (chamar_funcao vazio ( (lista_numeros (selecao_aritmetica 5) , (selecao_aritmetica 8)) ))) (expressoes (enquanto_faca enquanto (expressao_logica (selecao_logica j) <= (selecao_logica 10)) faca fimenquanto)) (expressoes (para_faca para j de 10 ate 1 passo (incremento -1) faca fimpara)) fimalgoritmo <EOF>)
 --------------------------------------------
 
