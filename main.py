@@ -137,12 +137,6 @@ def main(argv):
                 tipo = "<ON>"
             elif t == lexer.OUTRO_CASO:
                 tipo = "<OUTRO_CASO>"
-            elif t == lexer.OPERADOR_BINARIO:
-                tipo = "<OPERADOR_BINARIO>"
-            elif t == lexer.OPERADOR_RELACIONAL:
-                tipo = "<OPERADOR_RELACIONAL>"
-            elif t == lexer.OPERADOR_LOGICO:
-                tipo = "<OPERADOR_LOGICO>"
             elif t == lexer.OPERADOR_UNARIO:
                 tipo = "<OPERADOR_UNARIO>"
             elif t == lexer.PARA:
@@ -181,6 +175,40 @@ def main(argv):
                 tipo = "<VOID>"
             elif t == lexer.TIPO_DE_DADO:
                 tipo = "<TIPO_DE_DADO>"
+            elif t == lexer.OP_SOM:
+                tipo = "<SOMA>"
+            elif t == lexer.OP_SUB:
+                tipo = "<SUBTRACAO>"
+            elif t == lexer.OP_MUL:
+                tipo = "<MULTIPLICACAO>"
+            elif t == lexer.OP_DIV:
+                tipo = "<DIVISAO>"
+            elif t == lexer.OP_RES:
+                tipo = "<RESTO>"
+            elif t == lexer.OP_POT:
+                tipo = "<POTENCIA>"
+            elif t == lexer.OP_DIV_INT:
+                tipo = "<DIVISAO INTEIRA>"
+            elif t == lexer.OP_MAIOR:
+                tipo = "<MAIOR>"
+            elif t == lexer.OP_MAIOR_IGUAL:
+                tipo = "<MAIOR_IGUAL>"
+            elif t == lexer.OP_MENOR:
+                tipo = "<MENOR>"
+            elif t == lexer.OP_MENOR_IGUAL:
+                tipo = "<MENOR IGUAL>"
+            elif t == lexer.OP_IGUAL:
+                tipo = "<IGUAL>"
+            elif t == lexer.OP_DIFERENTE:
+                tipo = "<DIFERENTE>"
+            elif t == lexer.OP_NAO:
+                tipo = "<NAO>"
+            elif t == lexer.OP_OU:
+                tipo = "<OU>"
+            elif t == lexer.OP_E:
+                tipo = "<E>"
+            elif t == lexer.OP_XOU:
+                tipo = "<XOU>"
             if tipo != '':
                 output.write(str((linha, tipo, token.text)) + "\n")
             else:
